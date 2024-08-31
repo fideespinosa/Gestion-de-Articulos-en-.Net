@@ -26,15 +26,8 @@ namespace TPWinForm_Equipo10A
 
         private void button1_Click(object sender, EventArgs e)
         {
-            foreach (var item in Application.OpenForms)
-            {
-                if (item.GetType() == typeof(ArticulosWindow) ) {
-                    return;
-                }
-            }
-            ArticulosWindow articulosWindow = new ArticulosWindow();
-            articulosWindow.MdiParent = this;
-            articulosWindow.Show();
+         
+            
         }
 
         private void btnMarcas_Click(object sender, EventArgs e)
@@ -45,6 +38,20 @@ namespace TPWinForm_Equipo10A
         private void lblNombreMenu_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void articuloToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(ArticulosWindow))
+                {
+                    return;
+                }
+            }
+            ArticulosWindow articulosWindow = new ArticulosWindow();
+            //articulosWindow.MdiParent = this;
+            articulosWindow.ShowDialog();
         }
     }
 }
