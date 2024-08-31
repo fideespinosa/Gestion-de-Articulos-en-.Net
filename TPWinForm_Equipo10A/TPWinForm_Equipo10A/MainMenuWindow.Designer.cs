@@ -1,6 +1,6 @@
 ﻿namespace TPWinForm_Equipo10A
 {
-    partial class Form1
+    partial class MainMenuWindow
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -35,8 +35,7 @@
             // 
             // lblNombreMenu
             // 
-            this.lblNombreMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNombreMenu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNombreMenu.AutoSize = true;
             this.lblNombreMenu.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.lblNombreMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -47,10 +46,11 @@
             this.lblNombreMenu.Size = new System.Drawing.Size(353, 26);
             this.lblNombreMenu.TabIndex = 1;
             this.lblNombreMenu.Text = "ADMINISTRACION DE PRODUCTOS";
-            this.lblNombreMenu.Click += new System.EventHandler(this.label1_Click);
+            this.lblNombreMenu.Click += new System.EventHandler(this.lblNombreMenu_Click);
             // 
             // btnArticulos
             // 
+            this.btnArticulos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnArticulos.Location = new System.Drawing.Point(262, 161);
             this.btnArticulos.Name = "btnArticulos";
@@ -62,6 +62,7 @@
             // 
             // btnMarcas
             // 
+            this.btnMarcas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMarcas.Location = new System.Drawing.Point(262, 253);
             this.btnMarcas.Name = "btnMarcas";
@@ -69,8 +70,9 @@
             this.btnMarcas.TabIndex = 4;
             this.btnMarcas.Text = "MARCAS";
             this.btnMarcas.UseVisualStyleBackColor = true;
+            this.btnMarcas.Click += new System.EventHandler(this.btnMarcas_Click);
             // 
-            // Form1
+            // MainMenuWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -80,7 +82,8 @@
             this.Controls.Add(this.btnArticulos);
             this.Controls.Add(this.lblNombreMenu);
             this.IsMdiContainer = true;
-            this.Name = "Form1";
+            this.Name = "MainMenuWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
