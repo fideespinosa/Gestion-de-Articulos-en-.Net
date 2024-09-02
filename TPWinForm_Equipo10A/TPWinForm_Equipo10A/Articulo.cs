@@ -13,6 +13,6 @@ namespace TPWinForm_Equipo10A
         public string Descripcion { get; set; }
         public int Marca { get; set; }
         public int Categoria { get; set; }
-        public float Precio { get; set; }
+        public decimal Precio { get; set; }
     }
 }

@@ -17,9 +17,9 @@ namespace TPWinForm_Equipo10A
             SqlDataReader lector;
             try
             {
-                conexion.ConnectionString = "server=.; database=CATALOGO_P3_DB;  Trusted_Connection=True";
+                conexion.ConnectionString = "server=(local)\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "Select Codigo, Nombre, Descripcion, IdMarca, IdCategoria FROM ARTICULOS";
+                comando.CommandText = "Select Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio FROM ARTICULOS";
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -33,7 +33,7 @@ namespace TPWinForm_Equipo10A
                     aux.Descripcion = (string)lector["Descripcion"];
                     aux.Marca = (int)lector["IdMarca"];
                     aux.Categoria = (int)lector["IdCategoria"];
-                    //aux.Precio = (float)lector["Precio"];
+                    aux.Precio = (decimal)lector["Precio"];
 
                     lista.Add(aux);
                 }
