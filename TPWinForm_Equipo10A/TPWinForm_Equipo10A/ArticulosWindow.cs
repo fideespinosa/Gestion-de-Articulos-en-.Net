@@ -17,9 +17,5 @@ namespace TPWinForm_Equipo10A
             InitializeComponent();
         }
 
-        private void ArticulosWindow_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
