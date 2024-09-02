@@ -51,5 +51,19 @@ namespace TPWinForm_Equipo10A
             //articulosWindow.MdiParent = this;
             articulosWindow.ShowDialog();
         }
+
+        private void tsmListarArticulos_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(listarArticuloWindow))
+                {
+                    return;
+                }
+            }
+            listarArticuloWindow listarArticuloWindow = new listarArticuloWindow();
+            //articulosWindow.MdiParent = this;
+            listarArticuloWindow.ShowDialog();
+        }
     }
 }

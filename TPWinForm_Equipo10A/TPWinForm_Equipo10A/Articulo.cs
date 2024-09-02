@@ -8,11 +8,11 @@ namespace TPWinForm_Equipo10A
 {
     internal class Articulo
     {
-        public int Codigo { get; set; }
+        public string Codigo { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
-        public string Marca { get; set; }
-        public string Categoria { get; set; }
-        public int Precio { get; set; }
+        public int Marca { get; set; }
+        public int Categoria { get; set; }
+        public float Precio { get; set; }
     }
 }
