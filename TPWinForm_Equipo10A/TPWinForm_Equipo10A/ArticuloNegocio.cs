@@ -19,7 +19,7 @@ namespace TPWinForm_Equipo10A
             {
                 conexion.ConnectionString = "server=(local)\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "Select Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio FROM ARTICULOS";
+                comando.CommandText = "Select Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio, i.ImagenUrl FROM ARTICULOS A, IMAGENES I where A.Id = I.IdArticulo";
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -34,6 +34,8 @@ namespace TPWinForm_Equipo10A
                     aux.Marca = (int)lector["IdMarca"];
                     aux.Categoria = (int)lector["IdCategoria"];
                     aux.Precio = (decimal)lector["Precio"];
+                    aux.Imagen = new ArtImg();
+                    aux.Imagen.ImgUrl = (string)lector["ImagenUrl"];
 
                     lista.Add(aux);
                 }

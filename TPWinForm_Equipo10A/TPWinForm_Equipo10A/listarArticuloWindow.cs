@@ -17,10 +17,39 @@ namespace TPWinForm_Equipo10A
             InitializeComponent();
         }
 
+        private List<Articulo> ListaArticulos;
         private void listarArticuloWindow_Load(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
-            dgvListarArticulos.DataSource = negocio.listarArticulos();
+            ListaArticulos = negocio.listarArticulos();
+            dgvListarArticulos.DataSource = ListaArticulos;
+            picbxArticulo.Load(ListaArticulos[0].Imagen.ToString());
+            dgvListarArticulos.Columns["Imagen"].Visible = false;
+           
+      
+
+        }
+
+        private void dgvListarArticulos_SelectionChanged(object sender, EventArgs e)
+        {
+             Articulo Seleccionado = (Articulo)dgvListarArticulos.CurrentRow.DataBoundItem;
+            picbxArticulo.Load(Seleccionado.Imagen.ToString());
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(ArticulosWindow))
+                {
+                    return;
+                }
+            }
+            ArticulosWindow CrearArticulo = new ArticulosWindow();
+            //CrearArticulo.MdiParent = this;
+            CrearArticulo.Show();
+
         }
     }
 }

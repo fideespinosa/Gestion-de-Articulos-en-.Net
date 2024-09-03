@@ -49,7 +49,7 @@
             this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(343, 44);
+            this.lblTitulo.Location = new System.Drawing.Point(419, 44);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(187, 24);
             this.lblTitulo.TabIndex = 0;
@@ -72,7 +72,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtbNombre.Location = new System.Drawing.Point(155, 97);
             this.txtbNombre.Name = "txtbNombre";
-            this.txtbNombre.Size = new System.Drawing.Size(587, 20);
+            this.txtbNombre.Size = new System.Drawing.Size(738, 20);
             this.txtbNombre.TabIndex = 2;
             // 
             // lblCodAr
@@ -97,7 +97,7 @@
             // 
             this.cbxMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxMarca.FormattingEnabled = true;
-            this.cbxMarca.Location = new System.Drawing.Point(587, 140);
+            this.cbxMarca.Location = new System.Drawing.Point(738, 140);
             this.cbxMarca.Name = "cbxMarca";
             this.cbxMarca.Size = new System.Drawing.Size(155, 21);
             this.cbxMarca.TabIndex = 5;
@@ -106,7 +106,7 @@
             // 
             this.lblMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMarca.AutoSize = true;
-            this.lblMarca.Location = new System.Drawing.Point(535, 144);
+            this.lblMarca.Location = new System.Drawing.Point(686, 144);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(46, 13);
             this.lblMarca.TabIndex = 6;
@@ -116,7 +116,7 @@
             // 
             this.cbxCat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxCat.FormattingEnabled = true;
-            this.cbxCat.Location = new System.Drawing.Point(587, 185);
+            this.cbxCat.Location = new System.Drawing.Point(738, 185);
             this.cbxCat.Name = "cbxCat";
             this.cbxCat.Size = new System.Drawing.Size(155, 21);
             this.cbxCat.TabIndex = 7;
@@ -125,7 +125,7 @@
             // 
             this.lblCat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCat.AutoSize = true;
-            this.lblCat.Location = new System.Drawing.Point(516, 188);
+            this.lblCat.Location = new System.Drawing.Point(667, 188);
             this.lblCat.Name = "lblCat";
             this.lblCat.Size = new System.Drawing.Size(65, 13);
             this.lblCat.TabIndex = 8;
@@ -135,7 +135,7 @@
             // 
             this.lblPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(534, 226);
+            this.lblPrecio.Location = new System.Drawing.Point(685, 226);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(47, 13);
             this.lblPrecio.TabIndex = 9;
@@ -144,7 +144,7 @@
             // txtbPrecio
             // 
             this.txtbPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtbPrecio.Location = new System.Drawing.Point(588, 226);
+            this.txtbPrecio.Location = new System.Drawing.Point(739, 226);
             this.txtbPrecio.Name = "txtbPrecio";
             this.txtbPrecio.Size = new System.Drawing.Size(154, 20);
             this.txtbPrecio.TabIndex = 10;
@@ -169,7 +169,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregar.Location = new System.Drawing.Point(707, 579);
+            this.btnAgregar.Location = new System.Drawing.Point(858, 579);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(99, 35);
             this.btnAgregar.TabIndex = 13;
@@ -181,7 +181,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(873, 665);
+            this.ClientSize = new System.Drawing.Size(1024, 546);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.lblDesc);
@@ -198,7 +198,13 @@
             this.Controls.Add(this.lblTitulo);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1040, 585);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1040, 585);
             this.Name = "ArticulosWindow";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.ResumeLayout(false);

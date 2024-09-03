@@ -38,19 +38,7 @@ namespace TPWinForm_Equipo10A
 
         }
 
-        private void articuloToolStripMenuItem3_Click(object sender, EventArgs e)
-        {
-            foreach (var item in Application.OpenForms)
-            {
-                if (item.GetType() == typeof(ArticulosWindow))
-                {
-                    return;
-                }
-            }
-            ArticulosWindow articulosWindow = new ArticulosWindow();
-            //articulosWindow.MdiParent = this;
-            articulosWindow.ShowDialog();
-        }
+       
 
         private void tsmListarArticulos_Click(object sender, EventArgs e)
         {
@@ -62,8 +50,8 @@ namespace TPWinForm_Equipo10A
                 }
             }
             listarArticuloWindow listarArticuloWindow = new listarArticuloWindow();
-            //articulosWindow.MdiParent = this;
-            listarArticuloWindow.ShowDialog();
+            listarArticuloWindow.MdiParent = this;
+            listarArticuloWindow.Show();
         }
     }
 }

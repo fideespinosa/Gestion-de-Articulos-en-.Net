@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.lblNombreMenu = new System.Windows.Forms.Label();
-            this.btnArticulos = new System.Windows.Forms.Button();
-            this.btnMarcas = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.articuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,6 +45,7 @@
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verDetallesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmListarArticulos = new System.Windows.Forms.ToolStripMenuItem();
             this.tspMarca = new System.Windows.Forms.ToolStripMenuItem();
             this.crearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,51 +58,11 @@
             this.modificarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.verDetallesToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmListarArticulos = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
             this.contextMenuStrip3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblNombreMenu
-            // 
-            this.lblNombreMenu.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblNombreMenu.AutoSize = true;
-            this.lblNombreMenu.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblNombreMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblNombreMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblNombreMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreMenu.Location = new System.Drawing.Point(304, 132);
-            this.lblNombreMenu.Name = "lblNombreMenu";
-            this.lblNombreMenu.Size = new System.Drawing.Size(353, 26);
-            this.lblNombreMenu.TabIndex = 1;
-            this.lblNombreMenu.Text = "ADMINISTRACION DE PRODUCTOS";
-            this.lblNombreMenu.Click += new System.EventHandler(this.lblNombreMenu_Click);
-            // 
-            // btnArticulos
-            // 
-            this.btnArticulos.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnArticulos.Location = new System.Drawing.Point(347, 228);
-            this.btnArticulos.Name = "btnArticulos";
-            this.btnArticulos.Size = new System.Drawing.Size(249, 64);
-            this.btnArticulos.TabIndex = 3;
-            this.btnArticulos.Text = "ARTICULOS";
-            this.btnArticulos.UseVisualStyleBackColor = true;
-            this.btnArticulos.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnMarcas
-            // 
-            this.btnMarcas.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMarcas.Location = new System.Drawing.Point(347, 320);
-            this.btnMarcas.Name = "btnMarcas";
-            this.btnMarcas.Size = new System.Drawing.Size(249, 64);
-            this.btnMarcas.TabIndex = 4;
-            this.btnMarcas.Text = "MARCAS";
-            this.btnMarcas.UseVisualStyleBackColor = true;
-            this.btnMarcas.Click += new System.EventHandler(this.btnMarcas_Click);
             // 
             // contextMenuStrip1
             // 
@@ -174,7 +132,7 @@
             this.categoriaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(999, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1124, 24);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -194,33 +152,40 @@
             // articuloToolStripMenuItem3
             // 
             this.articuloToolStripMenuItem3.Name = "articuloToolStripMenuItem3";
-            this.articuloToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.articuloToolStripMenuItem3.Size = new System.Drawing.Size(133, 22);
             this.articuloToolStripMenuItem3.Text = "Crear";
-            this.articuloToolStripMenuItem3.Click += new System.EventHandler(this.articuloToolStripMenuItem3_Click);
+           
             // 
             // tsmBuscar
             // 
             this.tsmBuscar.Name = "tsmBuscar";
-            this.tsmBuscar.Size = new System.Drawing.Size(180, 22);
+            this.tsmBuscar.Size = new System.Drawing.Size(133, 22);
             this.tsmBuscar.Text = "Buscar";
             // 
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.modificarToolStripMenuItem.Text = "Modificar";
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             // 
             // verDetallesToolStripMenuItem
             // 
             this.verDetallesToolStripMenuItem.Name = "verDetallesToolStripMenuItem";
-            this.verDetallesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verDetallesToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.verDetallesToolStripMenuItem.Text = "Ver detalles";
+            // 
+            // tsmListarArticulos
+            // 
+            this.tsmListarArticulos.Name = "tsmListarArticulos";
+            this.tsmListarArticulos.Size = new System.Drawing.Size(133, 22);
+            this.tsmListarArticulos.Text = "Listar";
+            this.tsmListarArticulos.Click += new System.EventHandler(this.tsmListarArticulos_Click);
             // 
             // tspMarca
             // 
@@ -306,25 +271,17 @@
             this.verDetallesToolStripMenuItem2.Size = new System.Drawing.Size(133, 22);
             this.verDetallesToolStripMenuItem2.Text = "Ver detalles";
             // 
-            // tsmListarArticulos
-            // 
-            this.tsmListarArticulos.Name = "tsmListarArticulos";
-            this.tsmListarArticulos.Size = new System.Drawing.Size(180, 22);
-            this.tsmListarArticulos.Text = "Listar";
-            this.tsmListarArticulos.Click += new System.EventHandler(this.tsmListarArticulos_Click);
-            // 
             // MainMenuWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(999, 555);
+            this.ClientSize = new System.Drawing.Size(1124, 646);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.btnMarcas);
-            this.Controls.Add(this.btnArticulos);
-            this.Controls.Add(this.lblNombreMenu);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximumSize = new System.Drawing.Size(1140, 685);
+            this.MinimumSize = new System.Drawing.Size(1140, 685);
             this.Name = "MainMenuWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -340,10 +297,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblNombreMenu;
-        private System.Windows.Forms.Button btnArticulos;
-        private System.Windows.Forms.Button btnMarcas;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem articuloToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem marcaToolStripMenuItem;

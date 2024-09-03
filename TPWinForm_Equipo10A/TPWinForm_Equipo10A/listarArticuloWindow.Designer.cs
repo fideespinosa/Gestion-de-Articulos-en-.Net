@@ -30,17 +30,26 @@
         {
             this.dgvListarArticulos = new System.Windows.Forms.DataGridView();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.picbxArticulo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListarArticulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbxArticulo)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvListarArticulos
             // 
+            this.dgvListarArticulos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dgvListarArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListarArticulos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvListarArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvListarArticulos.Location = new System.Drawing.Point(12, 123);
             this.dgvListarArticulos.Name = "dgvListarArticulos";
-            this.dgvListarArticulos.Size = new System.Drawing.Size(662, 372);
+            this.dgvListarArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvListarArticulos.Size = new System.Drawing.Size(662, 352);
             this.dgvListarArticulos.TabIndex = 0;
+            this.dgvListarArticulos.SelectionChanged += new System.EventHandler(this.dgvListarArticulos_SelectionChanged);
             // 
             // lblTitulo
             // 
@@ -48,23 +57,75 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(503, 48);
+            this.lblTitulo.Location = new System.Drawing.Point(484, 45);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(155, 13);
             this.lblTitulo.TabIndex = 1;
             this.lblTitulo.Text = "LISTADO DE ARTICULOS";
             // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(19, 494);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(90, 31);
+            this.btnAgregar.TabIndex = 2;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(115, 493);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(90, 31);
+            this.btnModificar.TabIndex = 3;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(211, 493);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(90, 31);
+            this.btnEliminar.TabIndex = 4;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // picbxArticulo
+            // 
+            this.picbxArticulo.Location = new System.Drawing.Point(747, 149);
+            this.picbxArticulo.Name = "picbxArticulo";
+            this.picbxArticulo.Size = new System.Drawing.Size(341, 299);
+            this.picbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picbxArticulo.TabIndex = 5;
+            this.picbxArticulo.TabStop = false;
+            // 
             // listarArticuloWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1134, 603);
+            this.ControlBox = false;
+            this.Controls.Add(this.picbxArticulo);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.dgvListarArticulos);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "listarArticuloWindow";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "listarArticuloWindow";
+            this.TransparencyKey = System.Drawing.Color.Transparent;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.listarArticuloWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListarArticulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbxArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -74,5 +135,9 @@
 
         private System.Windows.Forms.DataGridView dgvListarArticulos;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.PictureBox picbxArticulo;
     }
 }

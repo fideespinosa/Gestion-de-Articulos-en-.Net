@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,5 +15,8 @@ namespace TPWinForm_Equipo10A
         public int Marca { get; set; }
         public int Categoria { get; set; }
         public decimal Precio { get; set; }
+        public ArtImg Imagen{ get; set; }
     }
+
+   
 }
