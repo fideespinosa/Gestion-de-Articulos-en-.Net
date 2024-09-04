@@ -5,9 +5,9 @@ using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TPWinForm_Equipo10A
+namespace Dominio
 {
-    internal class Articulo
+    public class Articulo
     {
         public string Codigo { get; set; }
         public string Nombre { get; set; }

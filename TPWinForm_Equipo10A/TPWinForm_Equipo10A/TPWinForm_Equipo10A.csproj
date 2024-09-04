@@ -46,9 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Articulo.cs" />
-    <Compile Include="ArticuloNegocio.cs" />
-    <Compile Include="ArtImg.cs" />
     <Compile Include="listarArticuloWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +96,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dominio\Dominio.csproj">
+      <Project>{5fe541f0-b9bb-43d0-b85d-dab9b441fea0}</Project>
+      <Name>Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{d29fe00e-420c-4a7b-b978-956e92f76e29}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
