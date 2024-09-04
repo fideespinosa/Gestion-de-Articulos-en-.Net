@@ -12,30 +12,25 @@ namespace Negocio
         public List<Articulo> listarArticulos()
         {
             List<Articulo> lista = new List<Articulo>();
-            SqlConnection conexion = new SqlConnection();
-            SqlCommand comando = new SqlCommand();
-            SqlDataReader lector;
+           AccesoDatos datos = new AccesoDatos();
             try
             {
-                conexion.ConnectionString = "server=(local)\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
-                comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "Select Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio, i.ImagenUrl FROM ARTICULOS A, IMAGENES I where A.Id = I.IdArticulo";
-                comando.Connection = conexion;
+                datos.SetearConsulta("Select Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio, i.ImagenUrl FROM ARTICULOS A, IMAGENES I where A.Id = I.IdArticulo");
+                datos.EjecturaLectura();
 
-                conexion.Open();
-                lector = comando.ExecuteReader();
+               
 
-                while (lector.Read())
+                while (datos.lector.Read())
                 {
                     Articulo aux = new Articulo();
-                    aux.Codigo = (string)lector["Codigo"];
-                    aux.Nombre = (string)lector["Nombre"];
-                    aux.Descripcion = (string)lector["Descripcion"];
-                    aux.Marca = (int)lector["IdMarca"];
-                    aux.Categoria = (int)lector["IdCategoria"];
-                    aux.Precio = (decimal)lector["Precio"];
+                    aux.Codigo = (string)datos.lector["Codigo"];
+                    aux.Nombre = (string)datos.lector["Nombre"];
+                    aux.Descripcion = (string)datos.lector["Descripcion"];
+                    aux.Marca = (int)datos.lector["IdMarca"];
+                    aux.Categoria = (int)datos.lector["IdCategoria"];
+                    aux.Precio = (decimal)datos.lector["Precio"];
                     aux.Imagen = new ArtImg();
-                    aux.Imagen.ImgUrl = (string)lector["ImagenUrl"];
+                    aux.Imagen.ImgUrl = (string)datos.lector["ImagenUrl"];
 
                     lista.Add(aux);
                 }
@@ -45,8 +40,8 @@ namespace Negocio
             {
                 throw ex;
             }
-            finally 
-            { conexion.Close(); }
+            
+            
         }
     }
 }
