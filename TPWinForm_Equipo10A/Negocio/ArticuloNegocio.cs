@@ -40,6 +40,10 @@ namespace Negocio
             {
                 throw ex;
             }
+            finally 
+            {
+                datos.CerrarConexion();
+            }
             
             
         }
