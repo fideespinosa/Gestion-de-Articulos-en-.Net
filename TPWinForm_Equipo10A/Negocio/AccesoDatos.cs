@@ -50,5 +50,21 @@ namespace Negocio
             }
         }
 
+        public void EjecutarAccion()
+        {
+
+            comando.Connection = conexion;
+            try
+            {
+                conexion.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch(Exception ex) 
+            {
+                throw ex;
+            }
+
+        }
+
     }
 }

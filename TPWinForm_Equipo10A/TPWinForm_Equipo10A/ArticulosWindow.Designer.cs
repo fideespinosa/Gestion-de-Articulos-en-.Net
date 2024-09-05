@@ -40,9 +40,10 @@
             this.lblPrecio = new System.Windows.Forms.Label();
             this.txtbPrecio = new System.Windows.Forms.TextBox();
             this.lblDesc = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtbDescAr = new System.Windows.Forms.RichTextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnAgregarArticulo = new System.Windows.Forms.Button();
+            this.btnCancelarArticulo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -159,13 +160,13 @@
             this.lblDesc.TabIndex = 11;
             this.lblDesc.Text = "Descripción:";
             // 
-            // richTextBox1
+            // txtbDescAr
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(119, 274);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(363, 175);
-            this.richTextBox1.TabIndex = 12;
-            this.richTextBox1.Text = "";
+            this.txtbDescAr.Location = new System.Drawing.Point(119, 274);
+            this.txtbDescAr.Name = "txtbDescAr";
+            this.txtbDescAr.Size = new System.Drawing.Size(363, 175);
+            this.txtbDescAr.TabIndex = 12;
+            this.txtbDescAr.Text = "";
             // 
             // btnAgregar
             // 
@@ -179,12 +180,23 @@
             // 
             // btnAgregarArticulo
             // 
-            this.btnAgregarArticulo.Location = new System.Drawing.Point(786, 471);
+            this.btnAgregarArticulo.Location = new System.Drawing.Point(656, 470);
             this.btnAgregarArticulo.Name = "btnAgregarArticulo";
             this.btnAgregarArticulo.Size = new System.Drawing.Size(107, 35);
             this.btnAgregarArticulo.TabIndex = 14;
             this.btnAgregarArticulo.Text = "Agregar";
             this.btnAgregarArticulo.UseVisualStyleBackColor = true;
+            this.btnAgregarArticulo.Click += new System.EventHandler(this.btnAgregarArticulo_Click);
+            // 
+            // btnCancelarArticulo
+            // 
+            this.btnCancelarArticulo.Location = new System.Drawing.Point(793, 470);
+            this.btnCancelarArticulo.Name = "btnCancelarArticulo";
+            this.btnCancelarArticulo.Size = new System.Drawing.Size(100, 35);
+            this.btnCancelarArticulo.TabIndex = 14;
+            this.btnCancelarArticulo.Text = "Cancelar";
+            this.btnCancelarArticulo.UseVisualStyleBackColor = true;
+            this.btnCancelarArticulo.Click += new System.EventHandler(this.button1_Click);
             // 
             // ArticulosWindow
             // 
@@ -192,9 +204,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1024, 546);
+            this.Controls.Add(this.btnCancelarArticulo);
             this.Controls.Add(this.btnAgregarArticulo);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.txtbDescAr);
             this.Controls.Add(this.lblDesc);
             this.Controls.Add(this.txtbPrecio);
             this.Controls.Add(this.lblPrecio);
@@ -237,8 +250,9 @@
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.TextBox txtbPrecio;
         private System.Windows.Forms.Label lblDesc;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txtbDescAr;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnAgregarArticulo;
+        private System.Windows.Forms.Button btnCancelarArticulo;
     }
 }

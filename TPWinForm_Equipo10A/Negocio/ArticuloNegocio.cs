@@ -9,6 +9,7 @@ namespace Negocio
 {
     public class ArticuloNegocio
     {
+
         public List<Articulo> listarArticulos()
         {
             List<Articulo> lista = new List<Articulo>();
@@ -46,6 +47,30 @@ namespace Negocio
             }
             
             
+        }
+
+        public void Agregar(Articulo art)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.SetearConsulta
+                    (
+                    "Insert into ARTICULOS (Codigo, Nombre, Descripcion, idMarca, idCategoria, Precio) " +
+                    "values ('" + art.Codigo + "', '" + art.Nombre + "', '" + art.Descripcion + "', '" + art.Marca + "','" + art.Categoria + "', '" + art.Precio + "')"
+                    );
+                datos.EjecutarAccion();
+
+            }
+            catch(Exception ex) 
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
         }
     }
 }
