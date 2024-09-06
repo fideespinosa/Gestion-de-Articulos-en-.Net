@@ -27,7 +27,7 @@ namespace Negocio
             comando.CommandText = consulta;
         }
 
-        public void EjecturaLectura()
+        public void EjecutarLectura()
         {
             comando.Connection = conexion;
 

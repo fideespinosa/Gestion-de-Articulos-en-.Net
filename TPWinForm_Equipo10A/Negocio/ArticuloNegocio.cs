@@ -17,7 +17,7 @@ namespace Negocio
             try
             {
                 datos.SetearConsulta("Select Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio, i.ImagenUrl FROM ARTICULOS A, IMAGENES I where A.Id = I.IdArticulo");
-                datos.EjecturaLectura();
+                datos.EjecutarLectura();
 
                
 

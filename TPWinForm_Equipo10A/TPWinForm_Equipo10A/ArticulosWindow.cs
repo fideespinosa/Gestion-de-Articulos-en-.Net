@@ -48,5 +48,28 @@ namespace TPWinForm_Equipo10A
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void ArticulosWindow_Load(object sender, EventArgs e)
+        {
+            CategoriaNegocio categoria = new CategoriaNegocio();
+            MarcasNegocio marca = new MarcasNegocio();
+
+            try
+            {
+                cbxMarca.DataSource = marca.ListarMarcas();
+              
+                cbxCat.DataSource = categoria.ListarCategoria();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void cbxMarca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

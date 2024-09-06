@@ -103,6 +103,7 @@
             this.cbxMarca.Name = "cbxMarca";
             this.cbxMarca.Size = new System.Drawing.Size(155, 21);
             this.cbxMarca.TabIndex = 5;
+            this.cbxMarca.SelectedIndexChanged += new System.EventHandler(this.cbxMarca_SelectedIndexChanged);
             // 
             // lblMarca
             // 
@@ -202,7 +203,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(1024, 546);
             this.Controls.Add(this.btnCancelarArticulo);
             this.Controls.Add(this.btnAgregarArticulo);
@@ -231,6 +232,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.ArticulosWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
