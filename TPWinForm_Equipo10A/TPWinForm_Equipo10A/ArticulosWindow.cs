@@ -33,8 +33,8 @@ namespace TPWinForm_Equipo10A
                 art.Nombre = txtbNombre.Text;
                 art.Codigo = txtbCodAr.Text;
                 art.Descripcion = txtbDescAr.Text;
-                art.Marca = cbxMarca.TabIndex;
-                art.Categoria = cbxCat.TabIndex;
+                art.MarcasCls = (Marcas)cbxMarca.SelectedItem;
+                art.CategoriasCls = (Categorias)cbxCat.SelectedItem;
                 art.Precio = decimal.Parse(txtbPrecio.Text);
                 art.Descripcion = txtbDescAr.Text;
 

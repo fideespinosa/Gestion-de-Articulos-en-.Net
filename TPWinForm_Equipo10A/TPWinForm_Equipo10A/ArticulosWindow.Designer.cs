@@ -98,6 +98,7 @@
             // cbxMarca
             // 
             this.cbxMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxMarca.FormattingEnabled = true;
             this.cbxMarca.Location = new System.Drawing.Point(738, 140);
             this.cbxMarca.Name = "cbxMarca";
@@ -118,6 +119,7 @@
             // cbxCat
             // 
             this.cbxCat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxCat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCat.FormattingEnabled = true;
             this.cbxCat.Location = new System.Drawing.Point(738, 185);
             this.cbxCat.Name = "cbxCat";
