@@ -44,7 +44,7 @@
             this.dgvListarArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListarArticulos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvListarArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvListarArticulos.Location = new System.Drawing.Point(12, 123);
+            this.dgvListarArticulos.Location = new System.Drawing.Point(12, 118);
             this.dgvListarArticulos.Name = "dgvListarArticulos";
             this.dgvListarArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListarArticulos.Size = new System.Drawing.Size(662, 352);
@@ -65,7 +65,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(19, 494);
+            this.btnAgregar.Location = new System.Drawing.Point(14, 477);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(90, 31);
             this.btnAgregar.TabIndex = 2;
@@ -75,7 +75,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(115, 493);
+            this.btnModificar.Location = new System.Drawing.Point(110, 476);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(90, 31);
             this.btnModificar.TabIndex = 3;
@@ -84,7 +84,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(211, 493);
+            this.btnEliminar.Location = new System.Drawing.Point(206, 476);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(90, 31);
             this.btnEliminar.TabIndex = 4;
@@ -115,6 +115,7 @@
             this.Controls.Add(this.dgvListarArticulos);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1150, 642);
             this.Name = "listarArticuloWindow";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

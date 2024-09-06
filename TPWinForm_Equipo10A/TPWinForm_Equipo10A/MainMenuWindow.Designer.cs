@@ -134,7 +134,7 @@
             // tsmListarArticulos
             // 
             this.tsmListarArticulos.Name = "tsmListarArticulos";
-            this.tsmListarArticulos.Size = new System.Drawing.Size(180, 22);
+            this.tsmListarArticulos.Size = new System.Drawing.Size(102, 22);
             this.tsmListarArticulos.Text = "Listar";
             this.tsmListarArticulos.Click += new System.EventHandler(this.tsmListarArticulos_Click);
             // 
@@ -149,8 +149,9 @@
             // verDetallesToolStripMenuItem1
             // 
             this.verDetallesToolStripMenuItem1.Name = "verDetallesToolStripMenuItem1";
-            this.verDetallesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.verDetallesToolStripMenuItem1.Size = new System.Drawing.Size(133, 22);
             this.verDetallesToolStripMenuItem1.Text = "Ver detalles";
+            this.verDetallesToolStripMenuItem1.Click += new System.EventHandler(this.verDetallesToolStripMenuItem1_Click);
             // 
             // categoriaToolStripMenuItem
             // 
@@ -165,6 +166,7 @@
             this.verDetallesToolStripMenuItem2.Name = "verDetallesToolStripMenuItem2";
             this.verDetallesToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.verDetallesToolStripMenuItem2.Text = "Ver detalles";
+            this.verDetallesToolStripMenuItem2.Click += new System.EventHandler(this.verDetallesToolStripMenuItem2_Click);
             // 
             // MainMenuWindow
             // 

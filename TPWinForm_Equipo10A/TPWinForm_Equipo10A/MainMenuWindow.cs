@@ -53,5 +53,33 @@ namespace TPWinForm_Equipo10A
             listarArticuloWindow.MdiParent = this;
             listarArticuloWindow.Show();
         }
+
+        private void verDetallesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(MarcasWindow))
+                {
+                    return;
+                }
+            }
+            MarcasWindow MarcasWindow = new MarcasWindow();
+            MarcasWindow.MdiParent = this;
+            MarcasWindow.Show();
+        }
+
+        private void verDetallesToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(CategoriaWindow))
+                {
+                    return;
+                }
+            }
+            CategoriaWindow CategoriaWindow = new CategoriaWindow();
+            CategoriaWindow.MdiParent = this;
+            CategoriaWindow.Show();
+        }
     }
 }
