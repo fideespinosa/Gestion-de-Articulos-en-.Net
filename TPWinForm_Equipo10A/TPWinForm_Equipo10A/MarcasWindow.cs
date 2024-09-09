@@ -24,7 +24,8 @@ namespace TPWinForm_Equipo10A
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-
+            CrearMarca crearMarca = new CrearMarca();
+            crearMarca.ShowDialog();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)

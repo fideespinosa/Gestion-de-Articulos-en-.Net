@@ -10,18 +10,16 @@ using System.Windows.Forms;
 
 namespace TPWinForm_Equipo10A
 {
-    public partial class CategoriaWindow : Form
+    public partial class CrearMarca : Form
     {
-        public CategoriaWindow()
+        public CrearMarca()
         {
             InitializeComponent();
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void lblTitulo_Click(object sender, EventArgs e)
         {
-            
-            AgregarCategoria AgregarCategoria = new AgregarCategoria();
-            AgregarCategoria.ShowDialog();
+
         }
     }
 }

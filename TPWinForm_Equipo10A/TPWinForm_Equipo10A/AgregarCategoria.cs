@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace TPWinForm_Equipo10A
 {
-    public partial class CategoriaWindow : Form
+    public partial class AgregarCategoria : Form
     {
-        public CategoriaWindow()
+        public AgregarCategoria()
         {
             InitializeComponent();
-        }
-
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            
-            AgregarCategoria AgregarCategoria = new AgregarCategoria();
-            AgregarCategoria.ShowDialog();
         }
     }
 }
