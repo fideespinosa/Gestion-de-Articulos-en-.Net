@@ -13,7 +13,7 @@ namespace Dominio
 
         public override string ToString()
         {
-            return Marca;
+            return " "+Marca;
         }
     }
 }
