@@ -24,7 +24,7 @@ namespace TPWinForm_Equipo10A
 
         private void tsmListarArticulos_Click(object sender, EventArgs e)
         {
-            cargar();
+            cargarListasArticulos();
         }
 
         private void cargarListasArticulos()
