@@ -19,28 +19,15 @@ namespace TPWinForm_Equipo10A
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            cargarListasArticulos();
+        }
+
+        private void tsmListarArticulos_Click(object sender, EventArgs e)
+        {
             cargar();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-         
-            
-        }
-
-        private void btnMarcas_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblNombreMenu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-       
-
-        private void tsmListarArticulos_Click(object sender, EventArgs e)
+        private void cargarListasArticulos()
         {
             foreach (var item in Application.OpenForms)
             {
@@ -56,19 +43,16 @@ namespace TPWinForm_Equipo10A
 
         private void verDetallesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            foreach (var item in Application.OpenForms)
-            {
-                if (item.GetType() == typeof(MarcasWindow))
-                {
-                    return;
-                }
-            }
-            MarcasWindow MarcasWindow = new MarcasWindow();
-            MarcasWindow.MdiParent = this;
-            MarcasWindow.Show();
+            frmMarcas();
         }
 
         private void verDetallesToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmCategorias();
+        }
+
+        //======= LLAMADAS FMR =======
+        private void frmCategorias()
         {
             foreach (var item in Application.OpenForms)
             {
@@ -81,5 +65,20 @@ namespace TPWinForm_Equipo10A
             CategoriaWindow.MdiParent = this;
             CategoriaWindow.Show();
         }
+        
+        private void frmMarcas()
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(MarcasWindow))
+                {
+                    return;
+                }
+            }
+            MarcasWindow MarcasWindow = new MarcasWindow();
+            MarcasWindow.MdiParent = this;
+            MarcasWindow.Show();
+        }
+
     }
 }
