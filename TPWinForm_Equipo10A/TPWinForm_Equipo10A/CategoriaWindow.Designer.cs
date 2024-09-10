@@ -28,107 +28,160 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblCategoria = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.picbxCategoria = new System.Windows.Forms.PictureBox();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picbxCategoria)).BeginInit();
+            this.dgvCategorias = new System.Windows.Forms.DataGridView();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.tsmArchivo = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmSalir = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmAccion = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmAgregar = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmModificar = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmEliminar = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmEliminarLogica = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmEliminarFisica = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblCategoria
+            // dgvCategorias
             // 
-            this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(510, 45);
-            this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(164, 13);
-            this.lblCategoria.TabIndex = 0;
-            this.lblCategoria.Text = "LISTADO DE CATEGORIAS";
+            this.dgvCategorias.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCategorias.Location = new System.Drawing.Point(13, 91);
+            this.dgvCategorias.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvCategorias.MinimumSize = new System.Drawing.Size(376, 293);
+            this.dgvCategorias.Name = "dgvCategorias";
+            this.dgvCategorias.RowHeadersWidth = 51;
+            this.dgvCategorias.Size = new System.Drawing.Size(426, 499);
+            this.dgvCategorias.TabIndex = 1;
             // 
-            // dataGridView1
+            // menuStrip1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 127);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(662, 352);
-            this.dataGridView1.TabIndex = 1;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmArchivo,
+            this.tsmAccion});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(451, 28);
+            this.menuStrip1.TabIndex = 7;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // picbxCategoria
+            // tsmArchivo
             // 
-            this.picbxCategoria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picbxCategoria.Location = new System.Drawing.Point(733, 158);
-            this.picbxCategoria.Name = "picbxCategoria";
-            this.picbxCategoria.Size = new System.Drawing.Size(341, 299);
-            this.picbxCategoria.TabIndex = 2;
-            this.picbxCategoria.TabStop = false;
+            this.tsmArchivo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmSalir});
+            this.tsmArchivo.Name = "tsmArchivo";
+            this.tsmArchivo.Size = new System.Drawing.Size(73, 24);
+            this.tsmArchivo.Text = "Archivo";
+            this.tsmArchivo.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // btnAgregar
+            // tsmSalir
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(12, 485);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(90, 31);
-            this.btnAgregar.TabIndex = 3;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            this.tsmSalir.Name = "tsmSalir";
+            this.tsmSalir.Size = new System.Drawing.Size(224, 26);
+            this.tsmSalir.Text = "Salir";
+            this.tsmSalir.Click += new System.EventHandler(this.tsmSalir_Click);
             // 
-            // btnModificar
+            // tsmAccion
             // 
-            this.btnModificar.Location = new System.Drawing.Point(108, 485);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(90, 31);
-            this.btnModificar.TabIndex = 4;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.tsmAccion.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmAgregar,
+            this.tsmModificar,
+            this.tsmEliminar});
+            this.tsmAccion.Name = "tsmAccion";
+            this.tsmAccion.Size = new System.Drawing.Size(68, 24);
+            this.tsmAccion.Text = "Accion";
             // 
-            // btnEliminar
+            // tsmAgregar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(204, 485);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(90, 31);
-            this.btnEliminar.TabIndex = 5;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.tsmAgregar.Name = "tsmAgregar";
+            this.tsmAgregar.Size = new System.Drawing.Size(224, 26);
+            this.tsmAgregar.Text = "Agregar";
+            // 
+            // tsmModificar
+            // 
+            this.tsmModificar.Name = "tsmModificar";
+            this.tsmModificar.Size = new System.Drawing.Size(224, 26);
+            this.tsmModificar.Text = "Modificar";
+            // 
+            // tsmEliminar
+            // 
+            this.tsmEliminar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmEliminarLogica,
+            this.tsmEliminarFisica});
+            this.tsmEliminar.Name = "tsmEliminar";
+            this.tsmEliminar.Size = new System.Drawing.Size(224, 26);
+            this.tsmEliminar.Text = "Eliminar";
+            // 
+            // tsmEliminarLogica
+            // 
+            this.tsmEliminarLogica.Name = "tsmEliminarLogica";
+            this.tsmEliminarLogica.Size = new System.Drawing.Size(224, 26);
+            this.tsmEliminarLogica.Text = "Logica";
+            // 
+            // tsmEliminarFisica
+            // 
+            this.tsmEliminarFisica.Name = "tsmEliminarFisica";
+            this.tsmEliminarFisica.Size = new System.Drawing.Size(224, 26);
+            this.tsmEliminarFisica.Text = "Fisica";
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(26, 49);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(185, 38);
+            this.lblTitulo.TabIndex = 6;
+            this.lblTitulo.Text = "Categorias";
+            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // CategoriaWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(1134, 603);
+            this.ClientSize = new System.Drawing.Size(451, 619);
             this.ControlBox = false;
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.picbxCategoria);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.lblCategoria);
+            this.Controls.Add(this.lblTitulo);
+            this.Controls.Add(this.dgvCategorias);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1150, 642);
+            this.MaximumSize = new System.Drawing.Size(469, 709);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(469, 520);
             this.Name = "CategoriaWindow";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picbxCategoria)).EndInit();
+            this.Text = "Categorias";
+            this.Load += new System.EventHandler(this.CategoriaWindow_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblCategoria;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.PictureBox picbxCategoria;
-        private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.DataGridView dgvCategorias;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        public System.Windows.Forms.ToolStripMenuItem tsmArchivo;
+        private System.Windows.Forms.ToolStripMenuItem tsmSalir;
+        private System.Windows.Forms.ToolStripMenuItem tsmAccion;
+        private System.Windows.Forms.ToolStripMenuItem tsmAgregar;
+        private System.Windows.Forms.ToolStripMenuItem tsmModificar;
+        private System.Windows.Forms.ToolStripMenuItem tsmEliminar;
+        private System.Windows.Forms.ToolStripMenuItem tsmEliminarLogica;
+        private System.Windows.Forms.ToolStripMenuItem tsmEliminarFisica;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }

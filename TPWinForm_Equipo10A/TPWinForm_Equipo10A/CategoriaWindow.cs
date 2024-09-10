@@ -23,5 +23,25 @@ namespace TPWinForm_Equipo10A
             AgregarCategoria AgregarCategoria = new AgregarCategoria();
             AgregarCategoria.ShowDialog();
         }
+
+        private void CategoriaWindow_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsmSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

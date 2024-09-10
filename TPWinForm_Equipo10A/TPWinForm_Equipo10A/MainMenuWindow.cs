@@ -62,8 +62,8 @@ namespace TPWinForm_Equipo10A
                 }
             }
             CategoriaWindow CategoriaWindow = new CategoriaWindow();
-            CategoriaWindow.MdiParent = this;
-            CategoriaWindow.Show();
+            //CategoriaWindow.MdiParent = this;
+            CategoriaWindow.ShowDialog();
         }
         
         private void frmMarcas()
