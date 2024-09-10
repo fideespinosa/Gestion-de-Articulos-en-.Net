@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.lblMarcas = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvListarMarcas = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.picbx = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarMarcas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbx)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,13 +48,13 @@
             this.lblMarcas.TabIndex = 0;
             this.lblMarcas.Text = "LISTADO DE MARCAS";
             // 
-            // dataGridView1
+            // dgvListarMarcas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 128);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(662, 352);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvListarMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListarMarcas.Location = new System.Drawing.Point(12, 128);
+            this.dgvListarMarcas.Name = "dgvListarMarcas";
+            this.dgvListarMarcas.Size = new System.Drawing.Size(662, 352);
+            this.dgvListarMarcas.TabIndex = 1;
             // 
             // btnAgregar
             // 
@@ -106,7 +106,7 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvListarMarcas);
             this.Controls.Add(this.lblMarcas);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -118,7 +118,7 @@
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MarcasWindow_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarMarcas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbx)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -128,7 +128,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblMarcas;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvListarMarcas;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dominio;
+using Negocio;
 
 namespace TPWinForm_Equipo10A
 {
@@ -17,9 +19,12 @@ namespace TPWinForm_Equipo10A
             InitializeComponent();
         }
 
+        private List<Marcas> ListaMarcas;
         private void MarcasWindow_Load(object sender, EventArgs e)
         {
-
+            MarcasNegocio marca = new MarcasNegocio();
+            ListaMarcas = marca.ListarMarcas();
+            dgvListarMarcas.DataSource = ListaMarcas;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -37,5 +42,6 @@ namespace TPWinForm_Equipo10A
         {
 
         }
+
     }
 }
