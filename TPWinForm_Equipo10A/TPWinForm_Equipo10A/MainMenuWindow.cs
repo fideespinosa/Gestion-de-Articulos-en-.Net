@@ -19,7 +19,7 @@ namespace TPWinForm_Equipo10A
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            cargar();
         }
 
         private void button1_Click(object sender, EventArgs e)
