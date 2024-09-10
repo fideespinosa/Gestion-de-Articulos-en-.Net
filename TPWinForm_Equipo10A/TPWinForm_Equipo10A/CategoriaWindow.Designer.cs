@@ -76,11 +76,11 @@
             this.tsmArchivo.Name = "tsmArchivo";
             this.tsmArchivo.Size = new System.Drawing.Size(73, 24);
             this.tsmArchivo.Text = "Archivo";
-            this.tsmArchivo.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // tsmSalir
             // 
             this.tsmSalir.Name = "tsmSalir";
+            this.tsmSalir.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
             this.tsmSalir.Size = new System.Drawing.Size(224, 26);
             this.tsmSalir.Text = "Salir";
             this.tsmSalir.Click += new System.EventHandler(this.tsmSalir_Click);
@@ -100,6 +100,7 @@
             this.tsmAgregar.Name = "tsmAgregar";
             this.tsmAgregar.Size = new System.Drawing.Size(224, 26);
             this.tsmAgregar.Text = "Agregar";
+            this.tsmAgregar.Click += new System.EventHandler(this.tsmAgregar_Click);
             // 
             // tsmModificar
             // 
@@ -119,13 +120,13 @@
             // tsmEliminarLogica
             // 
             this.tsmEliminarLogica.Name = "tsmEliminarLogica";
-            this.tsmEliminarLogica.Size = new System.Drawing.Size(224, 26);
+            this.tsmEliminarLogica.Size = new System.Drawing.Size(136, 26);
             this.tsmEliminarLogica.Text = "Logica";
             // 
             // tsmEliminarFisica
             // 
             this.tsmEliminarFisica.Name = "tsmEliminarFisica";
-            this.tsmEliminarFisica.Size = new System.Drawing.Size(224, 26);
+            this.tsmEliminarFisica.Size = new System.Drawing.Size(136, 26);
             this.tsmEliminarFisica.Text = "Fisica";
             // 
             // lblTitulo
@@ -139,7 +140,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(185, 38);
             this.lblTitulo.TabIndex = 6;
             this.lblTitulo.Text = "Categorias";
-            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // CategoriaWindow
             // 
