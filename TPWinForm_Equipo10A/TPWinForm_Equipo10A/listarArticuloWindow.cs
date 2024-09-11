@@ -27,7 +27,7 @@ namespace TPWinForm_Equipo10A
             dgvListarArticulos.DataSource = ListaArticulos;
             picbxArticulo.Load(ListaArticulos[0].Imagen.ToString());
             dgvListarArticulos.Columns["Imagen"].Visible = false;
-           
+      
       
 
         }

@@ -21,7 +21,8 @@ namespace Negocio
             comando = new SqlCommand();
         }
 
-        public void SetearConsulta(string consulta)
+        public void 
+            SetearConsulta(string consulta)
         {
             comando.CommandType = System.Data.CommandType.Text;
             comando.CommandText = consulta;
