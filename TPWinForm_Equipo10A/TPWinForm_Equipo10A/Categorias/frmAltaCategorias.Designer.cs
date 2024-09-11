@@ -1,6 +1,6 @@
 ﻿namespace TPWinForm_Equipo10A
 {
-    partial class AgregarCategoria
+    partial class frmAltaCategoria
     {
         /// <summary>
         /// Required designer variable.
@@ -119,7 +119,7 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // AgregarCategoria
+            // frmAltaCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -135,7 +135,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(657, 660);
             this.MinimumSize = new System.Drawing.Size(330, 262);
-            this.Name = "AgregarCategoria";
+            this.Name = "frmAltaCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);

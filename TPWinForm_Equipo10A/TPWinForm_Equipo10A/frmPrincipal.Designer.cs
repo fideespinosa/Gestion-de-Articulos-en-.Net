@@ -1,6 +1,6 @@
 ﻿namespace TPWinForm_Equipo10A
 {
-    partial class MainMenuWindow
+    partial class frmMainMenu
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -180,7 +180,7 @@
             this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             // 
-            // MainMenuWindow
+            // frmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -192,7 +192,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximumSize = new System.Drawing.Size(1514, 832);
             this.MinimumSize = new System.Drawing.Size(1514, 832);
-            this.Name = "MainMenuWindow";
+            this.Name = "frmMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

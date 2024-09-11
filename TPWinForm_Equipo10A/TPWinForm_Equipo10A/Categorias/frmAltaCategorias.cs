@@ -12,9 +12,9 @@ using Negocio;
 
 namespace TPWinForm_Equipo10A
 {
-    public partial class AgregarCategoria : Form
+    public partial class frmAltaCategoria : Form
     {
-        public AgregarCategoria()
+        public frmAltaCategoria()
         {
             InitializeComponent();
         }

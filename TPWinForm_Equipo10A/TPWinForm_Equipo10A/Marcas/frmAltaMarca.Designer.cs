@@ -1,6 +1,6 @@
 ﻿namespace TPWinForm_Equipo10A
 {
-    partial class CrearMarca
+    partial class frmCrearMarca
     {
         /// <summary>
         /// Required designer variable.
@@ -80,7 +80,7 @@
             this.txtbxNombre.Size = new System.Drawing.Size(118, 20);
             this.txtbxNombre.TabIndex = 4;
             // 
-            // CrearMarca
+            // frmCrearMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -93,9 +93,9 @@
             this.Controls.Add(this.lblTitulo);
             this.MaximumSize = new System.Drawing.Size(497, 545);
             this.MinimumSize = new System.Drawing.Size(497, 545);
-            this.Name = "CrearMarca";
+            this.Name = "frmCrearMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CrearMarca";
+            this.Text = "frmCrearMarca";
             this.ResumeLayout(false);
             this.PerformLayout();
 

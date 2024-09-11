@@ -12,9 +12,9 @@ using Dominio;
 
 namespace TPWinForm_Equipo10A
 {
-    public partial class ArticulosWindow : Form
+    public partial class frmAltaArticulo : Form
     {
-        public ArticulosWindow()
+        public frmAltaArticulo()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace TPWinForm_Equipo10A
 {
-    partial class CategoriaWindow
+    partial class frmCategoria
     {
         /// <summary>
         /// Required designer variable.
@@ -141,7 +141,7 @@
             this.lblTitulo.TabIndex = 6;
             this.lblTitulo.Text = "Categorias";
             // 
-            // CategoriaWindow
+            // frmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -157,7 +157,7 @@
             this.MaximumSize = new System.Drawing.Size(469, 709);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(469, 520);
-            this.Name = "CategoriaWindow";
+            this.Name = "frmCategoria";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

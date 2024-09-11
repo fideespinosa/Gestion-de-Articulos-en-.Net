@@ -46,70 +46,70 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategoriaWindow.cs">
+    <Compile Include="Categorias\frmCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CategoriaWindow.Designer.cs">
-      <DependentUpon>CategoriaWindow.cs</DependentUpon>
+    <Compile Include="Categorias\frmCategorias.Designer.cs">
+      <DependentUpon>frmCategorias.cs</DependentUpon>
     </Compile>
-    <Compile Include="AgregarCategoria.cs">
+    <Compile Include="Categorias\frmAltaCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AgregarCategoria.Designer.cs">
-      <DependentUpon>AgregarCategoria.cs</DependentUpon>
+    <Compile Include="Categorias\frmAltaCategorias.Designer.cs">
+      <DependentUpon>frmAltaCategorias.cs</DependentUpon>
     </Compile>
-    <Compile Include="CrearMarca.cs">
+    <Compile Include="Marcas\frmAltaMarca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CrearMarca.Designer.cs">
-      <DependentUpon>CrearMarca.cs</DependentUpon>
+    <Compile Include="Marcas\frmAltaMarca.Designer.cs">
+      <DependentUpon>frmAltaMarca.cs</DependentUpon>
     </Compile>
-    <Compile Include="MarcasWindow.cs">
+    <Compile Include="Marcas\frmMarca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MarcasWindow.Designer.cs">
-      <DependentUpon>MarcasWindow.cs</DependentUpon>
+    <Compile Include="Marcas\frmMarca.Designer.cs">
+      <DependentUpon>frmMarca.cs</DependentUpon>
     </Compile>
-    <Compile Include="listarArticuloWindow.cs">
+    <Compile Include="Articulo\frmArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="listarArticuloWindow.Designer.cs">
-      <DependentUpon>listarArticuloWindow.cs</DependentUpon>
+    <Compile Include="Articulo\frmArticulo.Designer.cs">
+      <DependentUpon>frmArticulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainMenuWindow.cs">
+    <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainMenuWindow.Designer.cs">
-      <DependentUpon>MainMenuWindow.cs</DependentUpon>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="ArticulosWindow.cs">
+    <Compile Include="Articulo\frmAltaArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ArticulosWindow.Designer.cs">
-      <DependentUpon>ArticulosWindow.cs</DependentUpon>
+    <Compile Include="Articulo\frmAltaArticulo.Designer.cs">
+      <DependentUpon>frmAltaArticulo.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ArticulosWindow.resx">
-      <DependentUpon>ArticulosWindow.cs</DependentUpon>
+    <EmbeddedResource Include="Articulo\frmAltaArticulo.resx">
+      <DependentUpon>frmAltaArticulo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CategoriaWindow.resx">
-      <DependentUpon>CategoriaWindow.cs</DependentUpon>
+    <EmbeddedResource Include="Categorias\frmCategorias.resx">
+      <DependentUpon>frmCategorias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AgregarCategoria.resx">
-      <DependentUpon>AgregarCategoria.cs</DependentUpon>
+    <EmbeddedResource Include="Categorias\frmAltaCategorias.resx">
+      <DependentUpon>frmAltaCategorias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrearMarca.resx">
-      <DependentUpon>CrearMarca.cs</DependentUpon>
+    <EmbeddedResource Include="Marcas\frmAltaMarca.resx">
+      <DependentUpon>frmAltaMarca.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MarcasWindow.resx">
-      <DependentUpon>MarcasWindow.cs</DependentUpon>
+    <EmbeddedResource Include="Marcas\frmMarca.resx">
+      <DependentUpon>frmMarca.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="listarArticuloWindow.resx">
-      <DependentUpon>listarArticuloWindow.cs</DependentUpon>
+    <EmbeddedResource Include="Articulo\frmArticulo.resx">
+      <DependentUpon>frmArticulo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainMenuWindow.resx">
-      <DependentUpon>MainMenuWindow.cs</DependentUpon>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

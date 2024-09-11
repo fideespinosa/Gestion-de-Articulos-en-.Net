@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TPWinForm_Equipo10A
 {
-    public partial class CrearMarca : Form
+    public partial class frmCrearMarca : Form
     {
-        public CrearMarca()
+        public frmCrearMarca()
         {
             InitializeComponent();
         }

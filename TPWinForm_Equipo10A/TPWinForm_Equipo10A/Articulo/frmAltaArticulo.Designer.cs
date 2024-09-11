@@ -1,6 +1,6 @@
 ﻿namespace TPWinForm_Equipo10A
 {
-    partial class ArticulosWindow
+    partial class frmAltaArticulo
     {
         /// <summary>
         /// Required designer variable.
@@ -201,7 +201,7 @@
             this.btnCancelarArticulo.UseVisualStyleBackColor = true;
             this.btnCancelarArticulo.Click += new System.EventHandler(this.button1_Click);
             // 
-            // ArticulosWindow
+            // frmAltaArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -229,7 +229,7 @@
             this.MaximumSize = new System.Drawing.Size(1040, 585);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1040, 585);
-            this.Name = "ArticulosWindow";
+            this.Name = "frmAltaArticulo";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

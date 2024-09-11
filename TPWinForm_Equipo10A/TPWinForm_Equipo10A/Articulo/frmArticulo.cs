@@ -12,9 +12,9 @@ using Negocio;
 
 namespace TPWinForm_Equipo10A
 {
-    public partial class listarArticuloWindow : Form
+    public partial class frmArticulo : Form
     {
-        public listarArticuloWindow()
+        public frmArticulo()
         {
             InitializeComponent();
         }
@@ -43,12 +43,12 @@ namespace TPWinForm_Equipo10A
 
             foreach (var item in Application.OpenForms)
             {
-                if (item.GetType() == typeof(ArticulosWindow))
+                if (item.GetType() == typeof(frmAltaArticulo))
                 {
                     return;
                 }
             }
-            ArticulosWindow CrearArticulo = new ArticulosWindow();
+            frmAltaArticulo CrearArticulo = new frmAltaArticulo();
             //CrearArticulo.MdiParent = this;
             CrearArticulo.Show();
 

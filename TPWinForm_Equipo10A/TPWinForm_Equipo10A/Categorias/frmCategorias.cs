@@ -12,10 +12,10 @@ using Negocio;
 
 namespace TPWinForm_Equipo10A
 {
-    public partial class CategoriaWindow : Form
+    public partial class frmCategoria : Form
     {
         private List<Categorias> categorias;
-        public CategoriaWindow()
+        public frmCategoria()
         {
             InitializeComponent();
         }
@@ -47,8 +47,8 @@ namespace TPWinForm_Equipo10A
 
         private void tsmAgregar_Click(object sender, EventArgs e)
         {
-            AgregarCategoria AgregarCategoria = new AgregarCategoria();
-            AgregarCategoria.ShowDialog();
+            frmAltaCategoria frmAltaCategoria = new frmAltaCategoria();
+            frmAltaCategoria.ShowDialog();
             cargarListadoCategorias();
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace TPWinForm_Equipo10A
 {
-    partial class listarArticuloWindow
+    partial class frmArticulo
     {
         /// <summary>
         /// Required designer variable.
@@ -100,7 +100,7 @@
             this.picbxArticulo.TabIndex = 5;
             this.picbxArticulo.TabStop = false;
             // 
-            // listarArticuloWindow
+            // frmArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -116,12 +116,12 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1150, 642);
-            this.Name = "listarArticuloWindow";
+            this.Name = "frmArticulo";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "listarArticuloWindow";
+            this.Text = "frmArticulo";
             this.TransparencyKey = System.Drawing.Color.Transparent;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.listarArticuloWindow_Load);

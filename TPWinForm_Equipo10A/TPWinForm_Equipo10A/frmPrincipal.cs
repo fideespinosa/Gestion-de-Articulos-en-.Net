@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TPWinForm_Equipo10A
 {
-    public partial class MainMenuWindow : Form
+    public partial class frmMainMenu : Form
     {
-        public MainMenuWindow()
+        public frmMainMenu()
         {
             InitializeComponent();
         }
@@ -31,14 +31,14 @@ namespace TPWinForm_Equipo10A
         {
             foreach (var item in Application.OpenForms)
             {
-                if (item.GetType() == typeof(listarArticuloWindow))
+                if (item.GetType() == typeof(frmArticulo))
                 {
                     return;
                 }
             }
-            listarArticuloWindow listarArticuloWindow = new listarArticuloWindow();
-            listarArticuloWindow.MdiParent = this;
-            listarArticuloWindow.Show();
+            frmArticulo frmArticulo = new frmArticulo();
+            frmArticulo.MdiParent = this;
+            frmArticulo.Show();
         }
 
         private void verDetallesToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -56,14 +56,14 @@ namespace TPWinForm_Equipo10A
         {
             foreach (var item in Application.OpenForms)
             {
-                if (item.GetType() == typeof(CategoriaWindow))
+                if (item.GetType() == typeof(frmCategoria))
                 {
                     return;
                 }
             }
-            CategoriaWindow CategoriaWindow = new CategoriaWindow();
-            //CategoriaWindow.MdiParent = this;
-            CategoriaWindow.ShowDialog();
+            frmCategoria frmCategoria = new frmCategoria();
+            //frmCategoria.MdiParent = this;
+            frmCategoria.ShowDialog();
         }
         
         private void frmMarcas()
