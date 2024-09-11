@@ -30,13 +30,13 @@ namespace Negocio
                     aux.MarcasCls = new Marcas();
                     aux.MarcasCls.Marca = (string)datos.lector["Marca"];
                     aux.CategoriasCls = new Categorias();
-                    aux.CategoriasCls.Categoria = (string)datos.lector["Categoriass"];
+                    aux.CategoriasCls.Descripcion = (string)datos.lector["Categoriass"];
                     aux.Precio = (decimal)datos.lector["Precio"];
                     aux.Imagen = new ArtImg();
                     aux.Imagen.ImgUrl = (string)datos.lector["ImagenUrl"];
 
                     aux.Marca = aux.MarcasCls.Marca;
-                    aux.Categoria = aux.CategoriasCls.Categoria;
+                    aux.Categoria = aux.CategoriasCls.Descripcion;
 
                     lista.Add(aux);
                 }

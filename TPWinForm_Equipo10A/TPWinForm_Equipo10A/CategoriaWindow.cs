@@ -30,7 +30,8 @@ namespace TPWinForm_Equipo10A
             try
             {
                 categorias = negocio.ListarCategoria();
-                dgvCategorias.DataSource = categorias;  
+                dgvCategorias.DataSource = categorias;
+                dgvCategorias.Columns[0].HeaderText = "Codigo";
             }
             catch (Exception ex)
             {
@@ -48,6 +49,7 @@ namespace TPWinForm_Equipo10A
         {
             AgregarCategoria AgregarCategoria = new AgregarCategoria();
             AgregarCategoria.ShowDialog();
+            cargarListadoCategorias();
         }
     }
 }
