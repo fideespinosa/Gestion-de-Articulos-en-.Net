@@ -99,6 +99,7 @@
             this.picbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picbxArticulo.TabIndex = 5;
             this.picbxArticulo.TabStop = false;
+            this.picbxArticulo.Click += new System.EventHandler(this.picbxArticulo_Click);
             // 
             // frmArticulo
             // 

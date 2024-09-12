@@ -9,10 +9,10 @@ namespace Dominio
     public class ArtImg
     {
         public int Id { get; set; }
-        public string ImgUrl { get; set; }
-         public override string ToString()
+        public string ImagenUrl { get; set; }
+        public override string ToString()
         {
-            return ImgUrl;
+            return ImagenUrl;
         }
     }
 

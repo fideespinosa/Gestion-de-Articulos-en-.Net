@@ -19,6 +19,11 @@ namespace TPWinForm_Equipo10A
             InitializeComponent();
         }
 
+        public MarcasWindow(Marcas marcas)
+        {
+            InitializeComponent();
+        }
+
         private List<Marcas> ListaMarcas;
         private void MarcasWindow_Load(object sender, EventArgs e)
         {
@@ -35,7 +40,11 @@ namespace TPWinForm_Equipo10A
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-
+            Marcas seleccionado;
+            seleccionado = (Marcas)dgvListarMarcas.CurrentRow.DataBoundItem;
+            MarcasWindow frmModificar = new MarcasWindow(seleccionado);
+            frmModificar.ShowDialog();
+            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

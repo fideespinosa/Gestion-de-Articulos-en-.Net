@@ -16,10 +16,7 @@ namespace Dominio
         public Categorias CategoriasCls;
 
         public decimal Precio { get; set; }
-        public ArtImg Imagen{ get; set; }
-
-        public String Categoria { get; set; }
-        public string Marca { get; set; }
+        public ArtImg Imagen;
 
     }
 

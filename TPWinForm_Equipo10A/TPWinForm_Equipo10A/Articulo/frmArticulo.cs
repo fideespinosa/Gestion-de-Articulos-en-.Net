@@ -23,11 +23,19 @@ namespace TPWinForm_Equipo10A
         private void listarArticuloWindow_Load(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
-            ListaArticulos = negocio.listarArticulos();
-            dgvListarArticulos.DataSource = ListaArticulos;
-            picbxArticulo.Load(ListaArticulos[0].Imagen.ToString());
-            dgvListarArticulos.Columns["Imagen"].Visible = false;
-      
+            try
+            {
+                ListaArticulos = negocio.ListarArticulos();
+                dgvListarArticulos.DataSource = ListaArticulos;
+                // picbxArticulo.Load(ListaArticulos[0].Imagen.ImagenUrl);
+                cargarImagen(ListaArticulos[0].Imagen.ImagenUrl);
+               // dgvListarArticulos.Columns["ImagenUrl"].Visible = false;
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }   
       
 
         }
@@ -35,7 +43,7 @@ namespace TPWinForm_Equipo10A
         private void dgvListarArticulos_SelectionChanged(object sender, EventArgs e)
         {
              Articulo Seleccionado = (Articulo)dgvListarArticulos.CurrentRow.DataBoundItem;
-            picbxArticulo.Load(Seleccionado.Imagen.ToString());
+            picbxArticulo.Load(Seleccionado.Imagen.ImagenUrl);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -52,6 +60,23 @@ namespace TPWinForm_Equipo10A
             //CrearArticulo.MdiParent = this;
             CrearArticulo.Show();
 
+        }
+
+        private void picbxArticulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                picbxArticulo.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+                picbxArticulo.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
+            }
         }
     }
 }
