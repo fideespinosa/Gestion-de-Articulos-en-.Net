@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dominio;
+using Negocio;
 
 namespace TPWinForm_Equipo10A
 {
@@ -19,7 +21,25 @@ namespace TPWinForm_Equipo10A
 
         private void lblTitulo_Click(object sender, EventArgs e)
         {
+            Close();
+        }
 
+        private void btnAgregarMarca_Click(object sender, EventArgs e)
+        {
+            MarcasNegocio negocio = new MarcasNegocio();
+            Marcas marca = new Marcas();
+
+            try 
+            {
+                marca.Marca = txtbxNombre.Text;
+                negocio.AgregarMarca(marca);
+                MessageBox.Show("Marca Agregada exitosamente");
+                Close();
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.ToString()) ;
+            }
         }
     }
 }
