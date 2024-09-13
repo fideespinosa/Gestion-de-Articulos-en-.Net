@@ -28,6 +28,7 @@ namespace TPWinForm_Equipo10A
         {
             Articulo art = new Articulo();
             ArticuloNegocio negocio = new ArticuloNegocio();
+            art.Imagen = new ArtImg();
             try
             {
                 art.Nombre = txtbNombre.Text;
@@ -37,7 +38,8 @@ namespace TPWinForm_Equipo10A
                 art.CategoriasCls = (Categorias)cbxCat.SelectedItem;
                 art.Precio = decimal.Parse(txtbPrecio.Text);
                 art.Descripcion = txtbDescAr.Text;
-
+                art.Imagen.IdArticulo = txtbCodAr.Text;
+                art.Imagen.ImagenUrl = txtbUrlImagen.Text;
                 negocio.Agregar(art);
 
                 MessageBox.Show("Articulo agregado correctamente.");
@@ -47,6 +49,7 @@ namespace TPWinForm_Equipo10A
             {
                 MessageBox.Show(ex.ToString());
             }
+
         }
 
         private void ArticulosWindow_Load(object sender, EventArgs e)
@@ -70,6 +73,28 @@ namespace TPWinForm_Equipo10A
         private void cbxMarca_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtbUrlImagen_Leave(object sender, EventArgs e)
+        {   
+            cargarImagen(txtbUrlImagen.Text);   
+        }
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pbxArticuloImagen.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+                pbxArticuloImagen.Load("https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png");
+            }
         }
     }
 }

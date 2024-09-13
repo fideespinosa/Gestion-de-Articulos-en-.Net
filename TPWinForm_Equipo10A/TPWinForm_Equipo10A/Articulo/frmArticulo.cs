@@ -22,28 +22,38 @@ namespace TPWinForm_Equipo10A
         private List<Articulo> ListaArticulos;
         private void listarArticuloWindow_Load(object sender, EventArgs e)
         {
+         cargarArticulo();
+
+        }
+        private void cargarArticulo()
+        {
+
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
                 ListaArticulos = negocio.ListarArticulos();
                 dgvListarArticulos.DataSource = ListaArticulos;
-                // picbxArticulo.Load(ListaArticulos[0].Imagen.ImagenUrl);
+                //picbxArticulo.Load(ListaArticulos[0].Imagen.ImagenUrl);
                 cargarImagen(ListaArticulos[0].Imagen.ImagenUrl);
-               // dgvListarArticulos.Columns["ImagenUrl"].Visible = false;
+                //dgvListarArticulos.Columns["ImagenUrl"].Visible = false;
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
-            }   
-      
-
+            }
         }
-
         private void dgvListarArticulos_SelectionChanged(object sender, EventArgs e)
         {
-             Articulo Seleccionado = (Articulo)dgvListarArticulos.CurrentRow.DataBoundItem;
-            picbxArticulo.Load(Seleccionado.Imagen.ImagenUrl);
+            try
+            {
+                Articulo Seleccionado = (Articulo)dgvListarArticulos.CurrentRow.DataBoundItem;
+                picbxArticulo.Load(Seleccionado.Imagen.ImagenUrl);
+            }
+            catch (Exception ex)
+            {
+                picbxArticulo.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
+            }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -58,8 +68,8 @@ namespace TPWinForm_Equipo10A
             }
             frmAltaArticulo CrearArticulo = new frmAltaArticulo();
             //CrearArticulo.MdiParent = this;
-            CrearArticulo.Show();
-
+            CrearArticulo.ShowDialog();
+            cargarArticulo();
         }
 
         private void picbxArticulo_Click(object sender, EventArgs e)
@@ -75,7 +85,7 @@ namespace TPWinForm_Equipo10A
             }
             catch (Exception ex)
             {
-                picbxArticulo.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
+                picbxArticulo.Load("https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png");
             }
         }
     }

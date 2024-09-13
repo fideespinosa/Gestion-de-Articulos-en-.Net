@@ -26,7 +26,7 @@ namespace Negocio
                                         M.Descripcion AS MarcaDescripcion, 
                                         C.Descripcion AS CategoriaDescripcion, 
                                         A.Precio, 
-                                        I.ImagenUrl 
+                                        I.ImagenUrl as Imagen
                                         FROM ARTICULOS AS A 
                                         LEFT JOIN Marcas AS M ON A.IdMarca = M.Id 
                                         LEFT JOIN Categorias AS C ON A.IdCategoria = C.Id
@@ -38,20 +38,23 @@ namespace Negocio
                 while (datos.lector.Read())
                 {
                     Articulo aux = new Articulo();
-                    ArtImg artImg = new ArtImg();
                     aux.Codigo = (string)datos.lector["Codigo"];
                     aux.Nombre = (string)datos.lector["Nombre"];
                     aux.Descripcion = (string)datos.lector["Descripcion"];
                     aux.MarcasCls = new Marcas();
                     aux.MarcasCls.Marca = (string)datos.lector["MarcaDescripcion"];
                     aux.CategoriasCls = new Categorias();
+                    //validacion de null categoria
+                    if (!(datos.lector["CategoriaDescripcion"] is DBNull ))
                     aux.CategoriasCls.Descripcion = (string)datos.lector["CategoriaDescripcion"];
+                    
+                    
                     aux.Precio = (decimal)datos.lector["Precio"];
-
-                    aux.Imagen = artImg;
-                    if (!(datos.lector["ImagenUrl"] is DBNull))
-                        aux.Imagen.ImagenUrl = datos.lector["ImagenUrl"].ToString();
-
+                    
+                    aux.Imagen = new ArtImg(); 
+                    if (!(datos.lector["Imagen"] is DBNull))
+                    aux.Imagen.ImagenUrl = datos.lector["Imagen"].ToString();
+                    
                     lista.Add(aux);
                 }
                 return lista;
@@ -73,17 +76,21 @@ namespace Negocio
             try
             {
                 datos.SetearConsulta(
-                                    "INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, Precio, idMarca, idCategoria) " +
-                                    "VALUES (@Codigo, @Nombre, @Descripcion, @Precio, @IdMarca, @IdCategoria)"
-                                );
-
+                                     "INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, Precio, idMarca, idCategoria) " +
+                                     "VALUES (@Codigo, @Nombre, @Descripcion, @Precio, @IdMarca, @IdCategoria); " +
+                                     "INSERT INTO IMAGENES (IdArticulo, ImagenUrl) " +
+                                     "VALUES (@ArticuloId, @ImagenUrl); " 
+                                     );
+                // Tabla articulos
                 datos.setearParametro("@Codigo", art.Codigo);
                 datos.setearParametro("@Nombre", art.Nombre);
                 datos.setearParametro("@Descripcion", art.Descripcion);
                 datos.setearParametro("@Precio", art.Precio);
                 datos.setearParametro("@IdMarca", art.MarcasCls.Id);
                 datos.setearParametro("@IdCategoria", art.CategoriasCls.Id);
-
+                //Tabla imagenes, insertados en 2do insert
+                datos.setearParametro("@ArticuloId", art.Imagen.IdArticulo);
+                datos.setearParametro("@ImagenUrl", art.Imagen.ImagenUrl);
                 datos.EjecutarAccion();
 
             }
