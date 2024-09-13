@@ -232,6 +232,7 @@
             this.pbxArticuloImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxArticuloImagen.TabIndex = 17;
             this.pbxArticuloImagen.TabStop = false;
+            this.pbxArticuloImagen.Click += new System.EventHandler(this.pbxArticuloImagen_Click);
             // 
             // frmAltaArticulo
             // 

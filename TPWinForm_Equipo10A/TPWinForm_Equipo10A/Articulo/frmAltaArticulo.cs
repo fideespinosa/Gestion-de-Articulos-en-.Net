@@ -29,19 +29,22 @@ namespace TPWinForm_Equipo10A
             Articulo art = new Articulo();
             ArticuloNegocio negocio = new ArticuloNegocio();
             art.Imagen = new ArtImg();
+            ArtImg img = new ArtImg();   
+
             try
             {
+                img.ImagenUrl = txtbUrlImagen.Text;
                 art.Nombre = txtbNombre.Text;
                 art.Codigo = txtbCodAr.Text;
                 art.Descripcion = txtbDescAr.Text;
                 art.MarcasCls = (Marcas)cbxMarca.SelectedItem;
                 art.CategoriasCls = (Categorias)cbxCat.SelectedItem;
                 art.Precio = decimal.Parse(txtbPrecio.Text);
-                art.Descripcion = txtbDescAr.Text;
-                art.Imagen.IdArticulo = txtbCodAr.Text;
-                art.Imagen.ImagenUrl = txtbUrlImagen.Text;
-                negocio.Agregar(art);
+                art.Descripcion = txtbDescAr.Text; 
+                img.ImagenUrl = txtbUrlImagen.Text;
 
+                negocio.Agregar(art, img);
+               // negocio.AgregarImagen(img, art);
                 MessageBox.Show("Articulo agregado correctamente.");
                 Close();
             }
@@ -95,6 +98,11 @@ namespace TPWinForm_Equipo10A
             {
                 pbxArticuloImagen.Load("https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png");
             }
+        }
+
+        private void pbxArticuloImagen_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
