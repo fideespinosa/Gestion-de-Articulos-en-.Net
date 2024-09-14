@@ -33,6 +33,7 @@ namespace TPWinForm_Equipo10A
             {
                 categorias.Descripcion = txtbxNombre.Text;
                 categoriaNegocio.agregar(categorias);
+                MessageBox.Show("Marca Agregada exitosamente");
                 Close();
             }
             catch (Exception ex) {

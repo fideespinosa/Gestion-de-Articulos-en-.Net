@@ -137,7 +137,7 @@
             this.MinimumSize = new System.Drawing.Size(330, 262);
             this.Name = "frmAltaCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Alta de Categoria";
             this.ResumeLayout(false);
             this.PerformLayout();
 

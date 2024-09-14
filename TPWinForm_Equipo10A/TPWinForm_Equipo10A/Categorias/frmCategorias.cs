@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,7 +20,7 @@ namespace TPWinForm_Equipo10A
         {
             InitializeComponent();
         }
-        private void CategoriaWindow_Load(object sender, EventArgs e)
+        private void frmCategoria_Load(object sender, EventArgs e)
         {
             cargarListadoCategorias();
         }
@@ -50,6 +51,24 @@ namespace TPWinForm_Equipo10A
             frmAltaCategoria frmAltaCategoria = new frmAltaCategoria();
             frmAltaCategoria.ShowDialog();
             cargarListadoCategorias();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAltaCategoria frmAltaCategoria = new frmAltaCategoria();
+            frmAltaCategoria.ShowDialog();
+            cargarListadoCategorias();
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

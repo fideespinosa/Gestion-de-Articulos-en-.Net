@@ -50,7 +50,7 @@ namespace TPWinForm_Equipo10A
                 Articulo Seleccionado = (Articulo)dgvListarArticulos.CurrentRow.DataBoundItem;
                 picbxArticulo.Load(Seleccionado.Imagen.ImagenUrl);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 picbxArticulo.Load("https://www.campana.gob.ar/wp-content/uploads/2022/05/placeholder.png");
             }
@@ -83,7 +83,7 @@ namespace TPWinForm_Equipo10A
             {
                 picbxArticulo.Load(imagen);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 picbxArticulo.Load("https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png");
             }
@@ -111,15 +111,33 @@ namespace TPWinForm_Equipo10A
 
         private void btnAgregarMarca_Click(object sender, EventArgs e)
         {
-            frmCrearMarca _frmCrearMarca = new frmCrearMarca();
-            //CrearArticulo.MdiParent = this;
-            _frmCrearMarca.ShowDialog();
+            frmAltaMarca frmAltaMarca = new frmAltaMarca();
+
+            frmAltaMarca.ShowDialog();
         }
 
         private void btnAgregarCategoria_Click(object sender, EventArgs e)
         {
-            frmAltaCategoria _frmAltaCate = new frmAltaCategoria();
-            _frmAltaCate.ShowDialog();
+            frmAltaCategoria frmAltaCategoria = new frmAltaCategoria();
+            frmAltaCategoria.ShowDialog();
+        }
+
+        private void tsmMarca_Click(object sender, EventArgs e)
+        {
+            frmMarcas frmMarcas = new frmMarcas();  
+            frmMarcas.ShowDialog();
+        }
+
+        private void tsmCategoria_Click(object sender, EventArgs e)
+        {
+            frmCategoria frmCategoria = new frmCategoria();
+            frmCategoria.ShowDialog();
+
+        }
+
+        private void dgvListarArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

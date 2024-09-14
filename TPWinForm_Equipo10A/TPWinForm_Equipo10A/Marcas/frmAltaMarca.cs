@@ -12,11 +12,20 @@ using Negocio;
 
 namespace TPWinForm_Equipo10A
 {
-    public partial class frmCrearMarca : Form
+    public partial class frmAltaMarca : Form
     {
-        public frmCrearMarca()
+        private Marcas seleccionado;
+
+        public frmAltaMarca()
         {
             InitializeComponent();
+        }
+
+        public frmAltaMarca(Marcas seleccionado)
+        {
+            this.seleccionado=seleccionado;
+            InitializeComponent();
+            this.lblTitulo.Text  = "MODIFICAR MARCA";
         }
 
         private void lblTitulo_Click(object sender, EventArgs e)

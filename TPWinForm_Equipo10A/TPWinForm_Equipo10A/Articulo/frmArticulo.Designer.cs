@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dgvListarArticulos = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -44,8 +45,18 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnLimpiarBusqueda = new System.Windows.Forms.Button();
             this.lblBuscar = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tspCatalogo = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmMarca = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmCategoria = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmSalir = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListarArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbxArticulo)).BeginInit();
+            this.contextMenuStrip2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvListarArticulos
@@ -54,18 +65,19 @@
             this.dgvListarArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListarArticulos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvListarArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvListarArticulos.Location = new System.Drawing.Point(11, 13);
+            this.dgvListarArticulos.Location = new System.Drawing.Point(10, 32);
             this.dgvListarArticulos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvListarArticulos.Name = "dgvListarArticulos";
             this.dgvListarArticulos.RowHeadersWidth = 51;
             this.dgvListarArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListarArticulos.Size = new System.Drawing.Size(883, 399);
             this.dgvListarArticulos.TabIndex = 0;
+            this.dgvListarArticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListarArticulos_CellContentClick);
             this.dgvListarArticulos.SelectionChanged += new System.EventHandler(this.dgvListarArticulos_SelectionChanged);
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(196, 429);
+            this.btnAgregar.Location = new System.Drawing.Point(195, 448);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(208, 42);
@@ -76,7 +88,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(196, 513);
+            this.btnModificar.Location = new System.Drawing.Point(195, 532);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(208, 42);
@@ -87,7 +99,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(196, 603);
+            this.btnEliminar.Location = new System.Drawing.Point(195, 622);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(208, 42);
@@ -98,7 +110,7 @@
             // 
             // picbxArticulo
             // 
-            this.picbxArticulo.Location = new System.Drawing.Point(425, 426);
+            this.picbxArticulo.Location = new System.Drawing.Point(424, 445);
             this.picbxArticulo.Margin = new System.Windows.Forms.Padding(4);
             this.picbxArticulo.Name = "picbxArticulo";
             this.picbxArticulo.Size = new System.Drawing.Size(237, 239);
@@ -109,7 +121,7 @@
             // 
             // btnAgregarImagen
             // 
-            this.btnAgregarImagen.Location = new System.Drawing.Point(678, 603);
+            this.btnAgregarImagen.Location = new System.Drawing.Point(677, 622);
             this.btnAgregarImagen.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarImagen.Name = "btnAgregarImagen";
             this.btnAgregarImagen.Size = new System.Drawing.Size(208, 42);
@@ -119,7 +131,7 @@
             // 
             // btnAgregarCategoria
             // 
-            this.btnAgregarCategoria.Location = new System.Drawing.Point(678, 513);
+            this.btnAgregarCategoria.Location = new System.Drawing.Point(677, 532);
             this.btnAgregarCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarCategoria.Name = "btnAgregarCategoria";
             this.btnAgregarCategoria.Size = new System.Drawing.Size(208, 42);
@@ -130,7 +142,7 @@
             // 
             // btnAgregarMarca
             // 
-            this.btnAgregarMarca.Location = new System.Drawing.Point(678, 429);
+            this.btnAgregarMarca.Location = new System.Drawing.Point(677, 448);
             this.btnAgregarMarca.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarMarca.Name = "btnAgregarMarca";
             this.btnAgregarMarca.Size = new System.Drawing.Size(208, 42);
@@ -142,7 +154,7 @@
             // lblCampo
             // 
             this.lblCampo.AutoSize = true;
-            this.lblCampo.Location = new System.Drawing.Point(14, 429);
+            this.lblCampo.Location = new System.Drawing.Point(13, 448);
             this.lblCampo.Name = "lblCampo";
             this.lblCampo.Size = new System.Drawing.Size(51, 16);
             this.lblCampo.TabIndex = 9;
@@ -151,7 +163,7 @@
             // lblCriterio
             // 
             this.lblCriterio.AutoSize = true;
-            this.lblCriterio.Location = new System.Drawing.Point(16, 485);
+            this.lblCriterio.Location = new System.Drawing.Point(15, 504);
             this.lblCriterio.Name = "lblCriterio";
             this.lblCriterio.Size = new System.Drawing.Size(49, 16);
             this.lblCriterio.TabIndex = 10;
@@ -160,7 +172,7 @@
             // cbxCampo
             // 
             this.cbxCampo.FormattingEnabled = true;
-            this.cbxCampo.Location = new System.Drawing.Point(17, 448);
+            this.cbxCampo.Location = new System.Drawing.Point(16, 467);
             this.cbxCampo.Name = "cbxCampo";
             this.cbxCampo.Size = new System.Drawing.Size(154, 24);
             this.cbxCampo.TabIndex = 11;
@@ -168,21 +180,21 @@
             // cbxCriterio
             // 
             this.cbxCriterio.FormattingEnabled = true;
-            this.cbxCriterio.Location = new System.Drawing.Point(17, 513);
+            this.cbxCriterio.Location = new System.Drawing.Point(16, 532);
             this.cbxCriterio.Name = "cbxCriterio";
             this.cbxCriterio.Size = new System.Drawing.Size(154, 24);
             this.cbxCriterio.TabIndex = 12;
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(17, 594);
+            this.txtBuscar.Location = new System.Drawing.Point(16, 613);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(152, 22);
             this.txtBuscar.TabIndex = 13;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(17, 622);
+            this.btnBuscar.Location = new System.Drawing.Point(16, 641);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 14;
@@ -191,7 +203,7 @@
             // 
             // btnLimpiarBusqueda
             // 
-            this.btnLimpiarBusqueda.Location = new System.Drawing.Point(98, 622);
+            this.btnLimpiarBusqueda.Location = new System.Drawing.Point(97, 641);
             this.btnLimpiarBusqueda.Name = "btnLimpiarBusqueda";
             this.btnLimpiarBusqueda.Size = new System.Drawing.Size(75, 23);
             this.btnLimpiarBusqueda.TabIndex = 15;
@@ -201,18 +213,80 @@
             // lblBuscar
             // 
             this.lblBuscar.AutoSize = true;
-            this.lblBuscar.Location = new System.Drawing.Point(16, 556);
+            this.lblBuscar.Location = new System.Drawing.Point(15, 575);
             this.lblBuscar.Name = "lblBuscar";
             this.lblBuscar.Size = new System.Drawing.Size(49, 16);
             this.lblBuscar.TabIndex = 16;
             this.lblBuscar.Text = "Criterio";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuToolStripMenuItem});
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(116, 28);
+            // 
+            // menuToolStripMenuItem
+            // 
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
+            this.menuToolStripMenuItem.Text = "Menu";
+            // 
+            // tspCatalogo
+            // 
+            this.tspCatalogo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmMarca,
+            this.tsmCategoria,
+            this.tsmSalir});
+            this.tspCatalogo.Name = "tspCatalogo";
+            this.tspCatalogo.Size = new System.Drawing.Size(84, 24);
+            this.tspCatalogo.Text = "Catalogo";
+            // 
+            // tsmMarca
+            // 
+            this.tsmMarca.Name = "tsmMarca";
+            this.tsmMarca.Size = new System.Drawing.Size(224, 26);
+            this.tsmMarca.Text = "Marca";
+            this.tsmMarca.Click += new System.EventHandler(this.tsmMarca_Click);
+            // 
+            // tsmCategoria
+            // 
+            this.tsmCategoria.Name = "tsmCategoria";
+            this.tsmCategoria.Size = new System.Drawing.Size(224, 26);
+            this.tsmCategoria.Text = "Categoria";
+            this.tsmCategoria.Click += new System.EventHandler(this.tsmCategoria_Click);
+            // 
+            // tsmSalir
+            // 
+            this.tsmSalir.Name = "tsmSalir";
+            this.tsmSalir.Size = new System.Drawing.Size(224, 26);
+            this.tsmSalir.Text = "Salir";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tspCatalogo});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(906, 28);
+            this.menuStrip1.TabIndex = 19;
+            this.menuStrip1.Text = "menuStrip1";
             // 
             // frmArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(908, 680);
+            this.ClientSize = new System.Drawing.Size(906, 703);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.lblBuscar);
             this.Controls.Add(this.btnLimpiarBusqueda);
             this.Controls.Add(this.btnBuscar);
@@ -229,6 +303,7 @@
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgvListarArticulos);
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -240,6 +315,9 @@
             this.Load += new System.EventHandler(this.listarArticuloWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListarArticulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbxArticulo)).EndInit();
+            this.contextMenuStrip2.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,5 +341,13 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnLimpiarBusqueda;
         private System.Windows.Forms.Label lblBuscar;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tspCatalogo;
+        private System.Windows.Forms.ToolStripMenuItem tsmMarca;
+        private System.Windows.Forms.ToolStripMenuItem tsmCategoria;
+        private System.Windows.Forms.ToolStripMenuItem tsmSalir;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }

@@ -73,15 +73,15 @@ namespace TPWinForm_Equipo10A
             /*
             foreach (var item in Application.OpenForms)
             {
-                if (item.GetType() == typeof(MarcasWindow))
+                if (item.GetType() == typeof(frmMarcas))
                 {
                     return;
                 }
             }
             */
-            MarcasWindow MarcasWindow = new MarcasWindow();
-            //MarcasWindow.MdiParent = this;
-            MarcasWindow.ShowDialog();
+            frmMarcas frmMarcas = new frmMarcas();
+            //frmMarcas.MdiParent = this;
+            frmMarcas.ShowDialog();
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

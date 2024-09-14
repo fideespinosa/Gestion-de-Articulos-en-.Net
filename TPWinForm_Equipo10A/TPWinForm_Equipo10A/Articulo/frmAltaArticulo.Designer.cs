@@ -243,6 +243,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Alta de Articulo";
             this.Load += new System.EventHandler(this.ArticulosWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticuloImagen)).EndInit();
             this.ResumeLayout(false);
