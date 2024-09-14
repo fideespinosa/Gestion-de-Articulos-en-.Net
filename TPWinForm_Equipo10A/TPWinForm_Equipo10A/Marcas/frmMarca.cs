@@ -12,21 +12,39 @@ using Negocio;
 
 namespace TPWinForm_Equipo10A
 {
-    public partial class MarcasWindow : Form
+    public partial class frmMarcas : Form
     {
-        public MarcasWindow()
+        private List<Marcas> marcas;
+        public frmMarcas()
         {
             InitializeComponent();
         }
 
-        public MarcasWindow(Marcas marcas)
+        public frmMarcas(Marcas marcas)
         {
             InitializeComponent();
         }
 
         private List<Marcas> ListaMarcas;
-        private void MarcasWindow_Load(object sender, EventArgs e)
+        private void frmMarcas_Load(object sender, EventArgs e)
         {
+            cargarMarcas();
+        }
+
+        private void cargarMarcas()
+        {
+            MarcasNegocio negocio = new MarcasNegocio();
+            try
+            {
+                marcas = negocio.ListarMarcas();
+                dgvListarMarcas.DataSource = marcas;
+                dgvListarMarcas.Columns[0].HeaderText = "Codigo";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
             MarcasNegocio marca = new MarcasNegocio();
             ListaMarcas = marca.ListarMarcas();
             dgvListarMarcas.DataSource = ListaMarcas;
@@ -34,16 +52,18 @@ namespace TPWinForm_Equipo10A
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmCrearMarca frmCrearMarca = new frmCrearMarca();
-            frmCrearMarca.ShowDialog();
+            frmAltaMarca frmAltaMarca = new frmAltaMarca();
+            frmAltaMarca.ShowDialog();
+            cargarMarcas();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             Marcas seleccionado;
             seleccionado = (Marcas)dgvListarMarcas.CurrentRow.DataBoundItem;
-            MarcasWindow frmModificar = new MarcasWindow(seleccionado);
-            frmModificar.ShowDialog();
+            frmAltaMarca modificar = new frmAltaMarca(seleccionado);
+            modificar.ShowDialog();
+            
             
         }
 
@@ -52,5 +72,17 @@ namespace TPWinForm_Equipo10A
 
         }
 
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsmAgregar_Click(object sender, EventArgs e)
+        {
+            frmAltaMarca frmAltaMarca = new frmAltaMarca();
+            frmAltaMarca.ShowDialog();
+            cargarMarcas();
+
+        }
     }
 }

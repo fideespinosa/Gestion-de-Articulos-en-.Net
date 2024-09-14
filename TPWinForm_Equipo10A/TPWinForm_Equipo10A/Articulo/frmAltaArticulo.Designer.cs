@@ -41,7 +41,6 @@
             this.txtbPrecio = new System.Windows.Forms.TextBox();
             this.lblDesc = new System.Windows.Forms.Label();
             this.txtbDescAr = new System.Windows.Forms.RichTextBox();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.btnAgregarArticulo = new System.Windows.Forms.Button();
             this.btnCancelarArticulo = new System.Windows.Forms.Button();
             this.txtbUrlImagen = new System.Windows.Forms.TextBox();
@@ -52,142 +51,121 @@
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(419, 44);
+            this.lblTitulo.Location = new System.Drawing.Point(13, 9);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(187, 24);
+            this.lblTitulo.Size = new System.Drawing.Size(235, 29);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "CREAR ARTICULO";
+            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // lblNombreAr
             // 
-            this.lblNombreAr.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNombreAr.AutoSize = true;
-            this.lblNombreAr.Location = new System.Drawing.Point(35, 100);
+            this.lblNombreAr.Location = new System.Drawing.Point(17, 83);
             this.lblNombreAr.Name = "lblNombreAr";
-            this.lblNombreAr.Size = new System.Drawing.Size(54, 13);
+            this.lblNombreAr.Size = new System.Drawing.Size(69, 17);
             this.lblNombreAr.TabIndex = 1;
             this.lblNombreAr.Text = "Nombre:";
             // 
             // txtbNombre
             // 
-            this.txtbNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtbNombre.Location = new System.Drawing.Point(155, 97);
+            this.txtbNombre.Location = new System.Drawing.Point(121, 80);
             this.txtbNombre.Name = "txtbNombre";
-            this.txtbNombre.Size = new System.Drawing.Size(693, 20);
+            this.txtbNombre.Size = new System.Drawing.Size(205, 23);
             this.txtbNombre.TabIndex = 1;
             // 
             // lblCodAr
             // 
-            this.lblCodAr.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCodAr.AutoSize = true;
-            this.lblCodAr.Location = new System.Drawing.Point(35, 141);
+            this.lblCodAr.Location = new System.Drawing.Point(17, 51);
             this.lblCodAr.Name = "lblCodAr";
-            this.lblCodAr.Size = new System.Drawing.Size(110, 13);
+            this.lblCodAr.Size = new System.Drawing.Size(58, 17);
             this.lblCodAr.TabIndex = 3;
-            this.lblCodAr.Text = "Código de articulo";
+            this.lblCodAr.Text = "Codigo";
+            this.lblCodAr.Click += new System.EventHandler(this.lblCodAr_Click);
             // 
             // txtbCodAr
             // 
-            this.txtbCodAr.Location = new System.Drawing.Point(155, 141);
+            this.txtbCodAr.Location = new System.Drawing.Point(121, 51);
             this.txtbCodAr.Name = "txtbCodAr";
-            this.txtbCodAr.Size = new System.Drawing.Size(230, 20);
+            this.txtbCodAr.Size = new System.Drawing.Size(205, 23);
             this.txtbCodAr.TabIndex = 2;
             // 
             // cbxMarca
             // 
-            this.cbxMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxMarca.FormattingEnabled = true;
-            this.cbxMarca.Location = new System.Drawing.Point(155, 177);
+            this.cbxMarca.Location = new System.Drawing.Point(121, 140);
             this.cbxMarca.Name = "cbxMarca";
-            this.cbxMarca.Size = new System.Drawing.Size(155, 21);
+            this.cbxMarca.Size = new System.Drawing.Size(205, 25);
             this.cbxMarca.TabIndex = 3;
             this.cbxMarca.SelectedIndexChanged += new System.EventHandler(this.cbxMarca_SelectedIndexChanged);
             // 
             // lblMarca
             // 
-            this.lblMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMarca.AutoSize = true;
-            this.lblMarca.Location = new System.Drawing.Point(99, 185);
+            this.lblMarca.Location = new System.Drawing.Point(17, 148);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(46, 13);
+            this.lblMarca.Size = new System.Drawing.Size(57, 17);
             this.lblMarca.TabIndex = 6;
             this.lblMarca.Text = "Marca:";
             // 
             // cbxCat
             // 
-            this.cbxCat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxCat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCat.FormattingEnabled = true;
-            this.cbxCat.Location = new System.Drawing.Point(155, 218);
+            this.cbxCat.Location = new System.Drawing.Point(121, 171);
             this.cbxCat.Name = "cbxCat";
-            this.cbxCat.Size = new System.Drawing.Size(155, 21);
+            this.cbxCat.Size = new System.Drawing.Size(205, 25);
             this.cbxCat.TabIndex = 4;
             // 
             // lblCat
             // 
-            this.lblCat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCat.AutoSize = true;
-            this.lblCat.Location = new System.Drawing.Point(80, 226);
+            this.lblCat.Location = new System.Drawing.Point(17, 179);
             this.lblCat.Name = "lblCat";
-            this.lblCat.Size = new System.Drawing.Size(65, 13);
+            this.lblCat.Size = new System.Drawing.Size(83, 17);
             this.lblCat.TabIndex = 8;
             this.lblCat.Text = "Categoria:";
             // 
             // lblPrecio
             // 
-            this.lblPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(98, 258);
+            this.lblPrecio.Location = new System.Drawing.Point(17, 205);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(47, 13);
+            this.lblPrecio.Size = new System.Drawing.Size(59, 17);
             this.lblPrecio.TabIndex = 9;
             this.lblPrecio.Text = "Precio:";
             // 
             // txtbPrecio
             // 
-            this.txtbPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtbPrecio.Location = new System.Drawing.Point(155, 255);
+            this.txtbPrecio.Location = new System.Drawing.Point(121, 202);
             this.txtbPrecio.Name = "txtbPrecio";
-            this.txtbPrecio.Size = new System.Drawing.Size(154, 20);
+            this.txtbPrecio.Size = new System.Drawing.Size(205, 23);
             this.txtbPrecio.TabIndex = 5;
             // 
             // lblDesc
             // 
             this.lblDesc.AutoSize = true;
-            this.lblDesc.Location = new System.Drawing.Point(67, 330);
+            this.lblDesc.Location = new System.Drawing.Point(17, 112);
             this.lblDesc.Name = "lblDesc";
-            this.lblDesc.Size = new System.Drawing.Size(78, 13);
+            this.lblDesc.Size = new System.Drawing.Size(98, 17);
             this.lblDesc.TabIndex = 11;
             this.lblDesc.Text = "Descripción:";
             // 
             // txtbDescAr
             // 
-            this.txtbDescAr.Location = new System.Drawing.Point(155, 330);
+            this.txtbDescAr.Location = new System.Drawing.Point(121, 109);
             this.txtbDescAr.Name = "txtbDescAr";
-            this.txtbDescAr.Size = new System.Drawing.Size(363, 175);
+            this.txtbDescAr.Size = new System.Drawing.Size(205, 25);
             this.txtbDescAr.TabIndex = 7;
             this.txtbDescAr.Text = "";
             // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregar.Location = new System.Drawing.Point(858, 579);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(99, 35);
-            this.btnAgregar.TabIndex = 13;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            // 
             // btnAgregarArticulo
             // 
-            this.btnAgregarArticulo.Location = new System.Drawing.Point(706, 470);
+            this.btnAgregarArticulo.Location = new System.Drawing.Point(20, 260);
             this.btnAgregarArticulo.Name = "btnAgregarArticulo";
             this.btnAgregarArticulo.Size = new System.Drawing.Size(107, 35);
             this.btnAgregarArticulo.TabIndex = 8;
@@ -197,7 +175,7 @@
             // 
             // btnCancelarArticulo
             // 
-            this.btnCancelarArticulo.Location = new System.Drawing.Point(890, 470);
+            this.btnCancelarArticulo.Location = new System.Drawing.Point(226, 260);
             this.btnCancelarArticulo.Name = "btnCancelarArticulo";
             this.btnCancelarArticulo.Size = new System.Drawing.Size(100, 35);
             this.btnCancelarArticulo.TabIndex = 11;
@@ -207,28 +185,27 @@
             // 
             // txtbUrlImagen
             // 
-            this.txtbUrlImagen.Location = new System.Drawing.Point(155, 292);
+            this.txtbUrlImagen.Location = new System.Drawing.Point(121, 231);
             this.txtbUrlImagen.Name = "txtbUrlImagen";
-            this.txtbUrlImagen.Size = new System.Drawing.Size(341, 20);
+            this.txtbUrlImagen.Size = new System.Drawing.Size(205, 23);
             this.txtbUrlImagen.TabIndex = 6;
             this.txtbUrlImagen.Leave += new System.EventHandler(this.txtbUrlImagen_Leave);
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(77, 292);
+            this.label1.Location = new System.Drawing.Point(17, 231);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 13);
+            this.label1.Size = new System.Drawing.Size(86, 17);
             this.label1.TabIndex = 16;
             this.label1.Text = "Url Imagen";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pbxArticuloImagen
             // 
-            this.pbxArticuloImagen.Location = new System.Drawing.Point(541, 123);
+            this.pbxArticuloImagen.Location = new System.Drawing.Point(347, 51);
             this.pbxArticuloImagen.Name = "pbxArticuloImagen";
-            this.pbxArticuloImagen.Size = new System.Drawing.Size(471, 308);
+            this.pbxArticuloImagen.Size = new System.Drawing.Size(215, 240);
             this.pbxArticuloImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxArticuloImagen.TabIndex = 17;
             this.pbxArticuloImagen.TabStop = false;
@@ -236,16 +213,15 @@
             // 
             // frmAltaArticulo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.ClientSize = new System.Drawing.Size(1024, 546);
+            this.ClientSize = new System.Drawing.Size(571, 344);
             this.Controls.Add(this.pbxArticuloImagen);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtbUrlImagen);
             this.Controls.Add(this.btnCancelarArticulo);
             this.Controls.Add(this.btnAgregarArticulo);
-            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtbDescAr);
             this.Controls.Add(this.lblDesc);
             this.Controls.Add(this.txtbPrecio);
@@ -262,13 +238,12 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1040, 585);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1040, 585);
             this.Name = "frmAltaArticulo";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Alta de Articulo";
             this.Load += new System.EventHandler(this.ArticulosWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticuloImagen)).EndInit();
             this.ResumeLayout(false);
@@ -291,7 +266,6 @@
         private System.Windows.Forms.TextBox txtbPrecio;
         private System.Windows.Forms.Label lblDesc;
         private System.Windows.Forms.RichTextBox txtbDescAr;
-        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnAgregarArticulo;
         private System.Windows.Forms.Button btnCancelarArticulo;
         private System.Windows.Forms.TextBox txtbUrlImagen;

@@ -130,5 +130,20 @@ namespace TPWinForm_Equipo10A
         {
 
         }
+
+        private void lblCodAr_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

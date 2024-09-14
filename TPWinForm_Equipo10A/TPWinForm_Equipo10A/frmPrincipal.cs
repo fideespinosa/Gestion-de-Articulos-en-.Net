@@ -29,6 +29,7 @@ namespace TPWinForm_Equipo10A
 
         private void cargarListasArticulos()
         {
+            /*
             foreach (var item in Application.OpenForms)
             {
                 if (item.GetType() == typeof(frmArticulo))
@@ -36,6 +37,7 @@ namespace TPWinForm_Equipo10A
                     return;
                 }
             }
+            */
             frmArticulo frmArticulo = new frmArticulo();
             frmArticulo.MdiParent = this;
             frmArticulo.Show();
@@ -68,17 +70,23 @@ namespace TPWinForm_Equipo10A
         
         private void frmMarcas()
         {
+            /*
             foreach (var item in Application.OpenForms)
             {
-                if (item.GetType() == typeof(MarcasWindow))
+                if (item.GetType() == typeof(frmMarcas))
                 {
                     return;
                 }
             }
-            MarcasWindow MarcasWindow = new MarcasWindow();
-            MarcasWindow.MdiParent = this;
-            MarcasWindow.Show();
+            */
+            frmMarcas frmMarcas = new frmMarcas();
+            //frmMarcas.MdiParent = this;
+            frmMarcas.ShowDialog();
         }
 
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

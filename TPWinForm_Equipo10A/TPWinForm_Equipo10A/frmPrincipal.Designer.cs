@@ -127,6 +127,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(1496, 28);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // tspArticulo
             // 
@@ -139,7 +140,7 @@
             // tsmListarArticulos
             // 
             this.tsmListarArticulos.Name = "tsmListarArticulos";
-            this.tsmListarArticulos.Size = new System.Drawing.Size(127, 26);
+            this.tsmListarArticulos.Size = new System.Drawing.Size(224, 26);
             this.tsmListarArticulos.Text = "Listar";
             this.tsmListarArticulos.Click += new System.EventHandler(this.tsmListarArticulos_Click);
             // 
@@ -170,14 +171,14 @@
             // verDetallesToolStripMenuItem2
             // 
             this.verDetallesToolStripMenuItem2.Name = "verDetallesToolStripMenuItem2";
-            this.verDetallesToolStripMenuItem2.Size = new System.Drawing.Size(224, 26);
+            this.verDetallesToolStripMenuItem2.Size = new System.Drawing.Size(169, 26);
             this.verDetallesToolStripMenuItem2.Text = "Ver detalles";
             this.verDetallesToolStripMenuItem2.Click += new System.EventHandler(this.verDetallesToolStripMenuItem2_Click);
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             // 
             // frmMainMenu
@@ -189,7 +190,7 @@
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(1514, 832);
             this.MinimumSize = new System.Drawing.Size(1514, 832);
             this.Name = "frmMainMenu";
