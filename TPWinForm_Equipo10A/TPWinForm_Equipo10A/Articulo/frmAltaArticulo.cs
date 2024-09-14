@@ -18,7 +18,14 @@ namespace TPWinForm_Equipo10A
         {
             InitializeComponent();
         }
+        private Articulo articulo = null;
+        private ArtImg ArtImg = null;
 
+        public frmAltaArticulo(Articulo Articulo)
+        {
+            InitializeComponent();
+            this.articulo = Articulo;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
@@ -63,8 +70,27 @@ namespace TPWinForm_Equipo10A
             try
             {
                 cbxMarca.DataSource = marca.ListarMarcas();
-              
+                cbxMarca.ValueMember = "Id";
+                cbxMarca.DisplayMember = "Descripcion";
                 cbxCat.DataSource = categoria.ListarCategoria();
+                cbxCat.ValueMember = "Id";
+                cbxCat.DisplayMember = "Descripcion";
+
+                if (articulo != null) 
+                {
+                    //artImg.ImagenUrl = txtbUrlImagen.Text;
+                    txtbNombre.Text = articulo.Nombre;
+                    txtbCodAr.Text = articulo.Codigo;
+                    txtbDescAr.Text = articulo.Descripcion;
+                    txtbPrecio.Text = articulo.Precio.ToString();
+                    cbxMarca.SelectedValue = articulo.MarcasCls.Id;
+                    cbxCat.SelectedValue = articulo.CategoriasCls.Id;
+
+                    //artImg.ImagenUrl = txtbUrlImagen.Text;
+                    // imagen se puede generar funcion para que con el id de articulo muestre imagen
+                    // se puede sobre cargar cargar imagen para que lo haga con el id de articulo.
+                }
+
             }
             catch (Exception ex)
             {

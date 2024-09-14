@@ -52,7 +52,7 @@ namespace TPWinForm_Equipo10A
             }
             catch (Exception ex)
             {
-                picbxArticulo.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
+                picbxArticulo.Load("https://www.campana.gob.ar/wp-content/uploads/2022/05/placeholder.png");
             }
         }
 
@@ -87,6 +87,16 @@ namespace TPWinForm_Equipo10A
             {
                 picbxArticulo.Load("https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png");
             }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+
+            Articulo Seleccionado = (Articulo)dgvListarArticulos.CurrentRow.DataBoundItem;
+            frmAltaArticulo modificar = new frmAltaArticulo(Seleccionado);
+            //CrearArticulo.MdiParent = this;
+            modificar.ShowDialog();
+            cargarArticulo();
         }
     }
 }

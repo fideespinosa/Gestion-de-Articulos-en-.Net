@@ -26,7 +26,9 @@ namespace Negocio
                                         A.Descripcion, 
                                         M.Descripcion AS MarcaDescripcion, 
                                         C.Descripcion AS CategoriaDescripcion, 
-                                        A.Precio, 
+                                        A.Precio,
+                                        M.Id as IdMarca,
+                                        C.Id as IdCategoria,
                                         I.ImagenUrl as Imagen
                                         FROM ARTICULOS AS A 
                                         LEFT JOIN Marcas AS M ON A.IdMarca = M.Id 
@@ -44,11 +46,13 @@ namespace Negocio
                     aux.Descripcion = (string)datos.lector["Descripcion"];
                     aux.MarcasCls = new Marcas();
                     aux.MarcasCls.Marca = (string)datos.lector["MarcaDescripcion"];
+                    aux.MarcasCls.Id = (int)datos.lector["IdMarca"];
                     aux.CategoriasCls = new Categorias();
                     //validacion de null categoria
                     if (!(datos.lector["CategoriaDescripcion"] is DBNull))
                         aux.CategoriasCls.Descripcion = (string)datos.lector["CategoriaDescripcion"];
-
+                    if (!(datos.lector["IdCategoria"] is DBNull))
+                        aux.CategoriasCls.Id = (int)datos.lector["IdCategoria"];
 
                     aux.Precio = (decimal)datos.lector["Precio"];
 

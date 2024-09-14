@@ -81,6 +81,7 @@
             this.btnModificar.TabIndex = 3;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
@@ -93,9 +94,9 @@
             // 
             // picbxArticulo
             // 
-            this.picbxArticulo.Location = new System.Drawing.Point(747, 149);
+            this.picbxArticulo.Location = new System.Drawing.Point(696, 118);
             this.picbxArticulo.Name = "picbxArticulo";
-            this.picbxArticulo.Size = new System.Drawing.Size(341, 299);
+            this.picbxArticulo.Size = new System.Drawing.Size(426, 352);
             this.picbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picbxArticulo.TabIndex = 5;
             this.picbxArticulo.TabStop = false;
