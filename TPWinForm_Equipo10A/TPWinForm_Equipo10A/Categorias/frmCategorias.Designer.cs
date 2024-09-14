@@ -39,6 +39,9 @@
             this.tsmEliminarLogica = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmEliminarFisica = new System.Windows.Forms.ToolStripMenuItem();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -54,7 +57,7 @@
             this.dgvCategorias.MinimumSize = new System.Drawing.Size(376, 293);
             this.dgvCategorias.Name = "dgvCategorias";
             this.dgvCategorias.RowHeadersWidth = 51;
-            this.dgvCategorias.Size = new System.Drawing.Size(426, 499);
+            this.dgvCategorias.Size = new System.Drawing.Size(426, 434);
             this.dgvCategorias.TabIndex = 1;
             // 
             // menuStrip1
@@ -81,7 +84,7 @@
             // 
             this.tsmSalir.Name = "tsmSalir";
             this.tsmSalir.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
-            this.tsmSalir.Size = new System.Drawing.Size(224, 26);
+            this.tsmSalir.Size = new System.Drawing.Size(167, 26);
             this.tsmSalir.Text = "Salir";
             this.tsmSalir.Click += new System.EventHandler(this.tsmSalir_Click);
             // 
@@ -98,14 +101,14 @@
             // tsmAgregar
             // 
             this.tsmAgregar.Name = "tsmAgregar";
-            this.tsmAgregar.Size = new System.Drawing.Size(224, 26);
+            this.tsmAgregar.Size = new System.Drawing.Size(156, 26);
             this.tsmAgregar.Text = "Agregar";
             this.tsmAgregar.Click += new System.EventHandler(this.tsmAgregar_Click);
             // 
             // tsmModificar
             // 
             this.tsmModificar.Name = "tsmModificar";
-            this.tsmModificar.Size = new System.Drawing.Size(224, 26);
+            this.tsmModificar.Size = new System.Drawing.Size(156, 26);
             this.tsmModificar.Text = "Modificar";
             // 
             // tsmEliminar
@@ -114,7 +117,7 @@
             this.tsmEliminarLogica,
             this.tsmEliminarFisica});
             this.tsmEliminar.Name = "tsmEliminar";
-            this.tsmEliminar.Size = new System.Drawing.Size(224, 26);
+            this.tsmEliminar.Size = new System.Drawing.Size(156, 26);
             this.tsmEliminar.Text = "Eliminar";
             // 
             // tsmEliminarLogica
@@ -141,6 +144,36 @@
             this.lblTitulo.TabIndex = 6;
             this.lblTitulo.Text = "Categorias";
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(305, 533);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(120, 38);
+            this.btnEliminar.TabIndex = 10;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(154, 533);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(120, 38);
+            this.btnModificar.TabIndex = 9;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(13, 533);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(120, 38);
+            this.btnAgregar.TabIndex = 8;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            // 
             // frmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -148,14 +181,15 @@
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(451, 619);
             this.ControlBox = false;
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.dgvCategorias);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(469, 709);
-            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(469, 520);
             this.Name = "frmCategoria";
             this.ShowIcon = false;
@@ -183,5 +217,8 @@
         private System.Windows.Forms.ToolStripMenuItem tsmEliminarLogica;
         private System.Windows.Forms.ToolStripMenuItem tsmEliminarFisica;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnAgregar;
     }
 }

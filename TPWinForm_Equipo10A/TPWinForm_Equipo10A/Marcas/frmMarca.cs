@@ -52,5 +52,9 @@ namespace TPWinForm_Equipo10A
 
         }
 
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

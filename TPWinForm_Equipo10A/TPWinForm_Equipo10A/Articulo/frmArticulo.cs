@@ -98,5 +98,28 @@ namespace TPWinForm_Equipo10A
             modificar.ShowDialog();
             cargarArticulo();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregarMarca_Click(object sender, EventArgs e)
+        {
+            frmCrearMarca _frmCrearMarca = new frmCrearMarca();
+            //CrearArticulo.MdiParent = this;
+            _frmCrearMarca.ShowDialog();
+        }
+
+        private void btnAgregarCategoria_Click(object sender, EventArgs e)
+        {
+            frmAltaCategoria _frmAltaCate = new frmAltaCategoria();
+            _frmAltaCate.ShowDialog();
+        }
     }
 }
