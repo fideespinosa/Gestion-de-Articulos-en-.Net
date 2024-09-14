@@ -36,7 +36,7 @@ namespace TPWinForm_Equipo10A
                 //picbxArticulo.Load(ListaArticulos[0].Imagen.ImagenUrl);
                 cargarImagen(ListaArticulos[0].Imagen.ImagenUrl);
                 //dgvListarArticulos.Columns["ImagenUrl"].Visible = false;
-
+                //dgvListarArticulos.Columns["Id"].Visible = false;
             }
             catch (Exception ex)
             {

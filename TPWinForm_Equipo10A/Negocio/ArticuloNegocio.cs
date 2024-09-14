@@ -21,6 +21,7 @@ namespace Negocio
             {
                 datos.SetearConsulta(@"
                                         SELECT 
+                                        A.Id,
                                         A.Codigo, 
                                         A.Nombre, 
                                         A.Descripcion, 
@@ -45,14 +46,17 @@ namespace Negocio
                     aux.Nombre = (string)datos.lector["Nombre"];
                     aux.Descripcion = (string)datos.lector["Descripcion"];
                     aux.MarcasCls = new Marcas();
-                    aux.MarcasCls.Marca = (string)datos.lector["MarcaDescripcion"];
-                    aux.MarcasCls.Id = (int)datos.lector["IdMarca"];
+                    aux.MarcasCls.Descripcion = (string)datos.lector["MarcaDescripcion"];
+                    if (!(datos.lector["IdMarca"] is DBNull))
+                        aux.MarcasCls.Id = (int)datos.lector["IdMarca"];
+                    if (!(datos.lector["MarcaDescripcion"] is DBNull))
+
                     aux.CategoriasCls = new Categorias();
                     //validacion de null categoria
-                    if (!(datos.lector["CategoriaDescripcion"] is DBNull))
-                        aux.CategoriasCls.Descripcion = (string)datos.lector["CategoriaDescripcion"];
                     if (!(datos.lector["IdCategoria"] is DBNull))
                         aux.CategoriasCls.Id = (int)datos.lector["IdCategoria"];
+                    if (!(datos.lector["CategoriaDescripcion"] is DBNull))
+                        aux.CategoriasCls.Descripcion = (string)datos.lector["CategoriaDescripcion"];
 
                     aux.Precio = (decimal)datos.lector["Precio"];
 

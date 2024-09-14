@@ -26,7 +26,7 @@ namespace Negocio
                     Marcas aux = new Marcas();
 
                     aux.Id = (int)datos.lector["Id"];
-                    aux.Marca = (string)datos.lector["Descripcion"];
+                    aux.Descripcion = (string)datos.lector["Descripcion"];
                     list.Add(aux);
                 }
                 return list;
@@ -48,7 +48,7 @@ namespace Negocio
             try
             {
                 datos.SetearConsulta("INSERT INTO Marcas (Descripcion) VALUES (@Descripcion)");
-                datos.setearParametro("@Descripcion", marcas.Marca); 
+                datos.setearParametro("@Descripcion", marcas.Descripcion); 
                 datos.EjecutarAccion();
 
             }

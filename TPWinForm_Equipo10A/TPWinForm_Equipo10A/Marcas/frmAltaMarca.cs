@@ -31,7 +31,7 @@ namespace TPWinForm_Equipo10A
 
             try 
             {
-                marca.Marca = txtbxNombre.Text;
+                marca.Descripcion = txtbxNombre.Text;
                 negocio.AgregarMarca(marca);
                 MessageBox.Show("Marca Agregada exitosamente");
                 Close();
