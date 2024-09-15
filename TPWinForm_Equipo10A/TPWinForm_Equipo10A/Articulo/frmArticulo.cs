@@ -14,12 +14,14 @@ namespace TPWinForm_Equipo10A
 {
     public partial class frmArticulo : Form
     {
+        private List<Articulo> ListaArticulos;
+        private ArticuloNegocio negocio;
         public frmArticulo()
         {
             InitializeComponent();
         }
 
-        private List<Articulo> ListaArticulos;
+        
         private void frmArticulo_Load(object sender, EventArgs e)
         {
             cargarArticulo();
@@ -29,17 +31,19 @@ namespace TPWinForm_Equipo10A
 
         private void cargarCbxCampo()
         {
+            cbxCampo.Items.Clear();
             cbxCampo.Items.Add("Codigo");
             cbxCampo.Items.Add("Nombre");
             cbxCampo.Items.Add("Marca");
             cbxCampo.Items.Add("Categoria");
             cbxCampo.Items.Add("Precio");
+            cbxCriterio.Items.Clear();
         }
 
         private void cargarArticulo()
         {
 
-            ArticuloNegocio negocio = new ArticuloNegocio();
+            negocio = new ArticuloNegocio();
             try
             {
                 ListaArticulos = negocio.ListarArticulos();
@@ -106,7 +110,7 @@ namespace TPWinForm_Equipo10A
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            ArticuloNegocio negocio = new ArticuloNegocio();
+            negocio = new ArticuloNegocio();
             Articulo seleccionado;
             try
             {
@@ -161,14 +165,13 @@ namespace TPWinForm_Equipo10A
 
             if (opcion == "Precio")
             {
-                cbxCriterio.Items.Clear();
                 cbxCriterio.Items.Add("Mayor a");
                 cbxCriterio.Items.Add("Menor a");
                 cbxCriterio.Items.Add("Igual a");
             }
             else
             {
-                cbxCriterio.Items.Clear();
+                
                 cbxCriterio.Items.Add("Comienza con");
                 cbxCriterio.Items.Add("Termina con");
                 cbxCriterio.Items.Add("Contiene");
@@ -182,6 +185,15 @@ namespace TPWinForm_Equipo10A
             cbxCampo.Text="";
             cbxCriterio.Text="";
             //cbxCriterio.Items.Clear();
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            negocio = new ArticuloNegocio();    
+            ListaArticulos = negocio.ListarArticulos();
+            if (txtBuscar.TextLength>0)
+                ListaArticulos = ListaArticulos.Where(x => x.Nombre.ToLower().Contains(txtBuscar.Text.ToLower())).ToList();
+            dgvListarArticulos.DataSource = ListaArticulos;
         }
     }
 }

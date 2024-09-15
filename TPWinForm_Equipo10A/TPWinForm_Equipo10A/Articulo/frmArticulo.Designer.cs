@@ -191,6 +191,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(152, 22);
             this.txtBuscar.TabIndex = 8;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // btnBuscar
             // 
@@ -254,21 +255,21 @@
             // tsmMarca
             // 
             this.tsmMarca.Name = "tsmMarca";
-            this.tsmMarca.Size = new System.Drawing.Size(224, 26);
+            this.tsmMarca.Size = new System.Drawing.Size(157, 26);
             this.tsmMarca.Text = "Marca";
             this.tsmMarca.Click += new System.EventHandler(this.tsmMarca_Click);
             // 
             // tsmCategoria
             // 
             this.tsmCategoria.Name = "tsmCategoria";
-            this.tsmCategoria.Size = new System.Drawing.Size(224, 26);
+            this.tsmCategoria.Size = new System.Drawing.Size(157, 26);
             this.tsmCategoria.Text = "Categoria";
             this.tsmCategoria.Click += new System.EventHandler(this.tsmCategoria_Click);
             // 
             // tsmSalir
             // 
             this.tsmSalir.Name = "tsmSalir";
-            this.tsmSalir.Size = new System.Drawing.Size(224, 26);
+            this.tsmSalir.Size = new System.Drawing.Size(157, 26);
             this.tsmSalir.Text = "Salir";
             // 
             // menuStrip1
