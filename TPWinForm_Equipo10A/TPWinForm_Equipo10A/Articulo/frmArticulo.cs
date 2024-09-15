@@ -22,9 +22,20 @@ namespace TPWinForm_Equipo10A
         private List<Articulo> ListaArticulos;
         private void frmArticulo_Load(object sender, EventArgs e)
         {
-         cargarArticulo();
+            cargarArticulo();
+            cargarCbxCampo();
 
         }
+
+        private void cargarCbxCampo()
+        {
+            cbxCampo.Items.Add("Codigo");
+            cbxCampo.Items.Add("Nombre");
+            cbxCampo.Items.Add("Marca");
+            cbxCampo.Items.Add("Categoria");
+            cbxCampo.Items.Add("Precio");
+        }
+
         private void cargarArticulo()
         {
 
@@ -139,5 +150,38 @@ namespace TPWinForm_Equipo10A
 
         }
 
+        private void lblBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxCampo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string opcion = cbxCampo.SelectedItem.ToString();
+
+            if (opcion == "Precio")
+            {
+                cbxCriterio.Items.Clear();
+                cbxCriterio.Items.Add("Mayor a");
+                cbxCriterio.Items.Add("Menor a");
+                cbxCriterio.Items.Add("Igual a");
+            }
+            else
+            {
+                cbxCriterio.Items.Clear();
+                cbxCriterio.Items.Add("Comienza con");
+                cbxCriterio.Items.Add("Termina con");
+                cbxCriterio.Items.Add("Contiene");
+            }
+        }
+
+        private void btnLimpiarBusqueda_Click(object sender, EventArgs e)
+        {
+            cbxCriterio.Items.Clear();
+            cargarCbxCampo();
+            cbxCampo.Text="";
+            cbxCriterio.Text="";
+            //cbxCriterio.Items.Clear();
+        }
     }
 }

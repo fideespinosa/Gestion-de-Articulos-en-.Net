@@ -71,7 +71,8 @@
             this.dgvListarArticulos.RowHeadersWidth = 51;
             this.dgvListarArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListarArticulos.Size = new System.Drawing.Size(883, 399);
-            this.dgvListarArticulos.TabIndex = 0;
+            this.dgvListarArticulos.TabIndex = 17;
+            this.dgvListarArticulos.TabStop = false;
             this.dgvListarArticulos.SelectionChanged += new System.EventHandler(this.dgvListarArticulos_SelectionChanged);
             // 
             // btnAgregar
@@ -80,7 +81,7 @@
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(208, 42);
-            this.btnAgregar.TabIndex = 2;
+            this.btnAgregar.TabIndex = 0;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -91,7 +92,7 @@
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(208, 42);
-            this.btnModificar.TabIndex = 3;
+            this.btnModificar.TabIndex = 1;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -102,7 +103,7 @@
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(208, 42);
-            this.btnEliminar.TabIndex = 4;
+            this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -123,7 +124,7 @@
             this.btnAgregarImagen.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarImagen.Name = "btnAgregarImagen";
             this.btnAgregarImagen.Size = new System.Drawing.Size(208, 42);
-            this.btnAgregarImagen.TabIndex = 8;
+            this.btnAgregarImagen.TabIndex = 5;
             this.btnAgregarImagen.Text = "Agregar Imagen";
             this.btnAgregarImagen.UseVisualStyleBackColor = true;
             // 
@@ -133,7 +134,7 @@
             this.btnAgregarCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarCategoria.Name = "btnAgregarCategoria";
             this.btnAgregarCategoria.Size = new System.Drawing.Size(208, 42);
-            this.btnAgregarCategoria.TabIndex = 7;
+            this.btnAgregarCategoria.TabIndex = 4;
             this.btnAgregarCategoria.Text = "Agregar Categoria";
             this.btnAgregarCategoria.UseVisualStyleBackColor = true;
             this.btnAgregarCategoria.Click += new System.EventHandler(this.btnAgregarCategoria_Click);
@@ -144,7 +145,7 @@
             this.btnAgregarMarca.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarMarca.Name = "btnAgregarMarca";
             this.btnAgregarMarca.Size = new System.Drawing.Size(208, 42);
-            this.btnAgregarMarca.TabIndex = 6;
+            this.btnAgregarMarca.TabIndex = 3;
             this.btnAgregarMarca.Text = "Agregar Marca";
             this.btnAgregarMarca.UseVisualStyleBackColor = true;
             this.btnAgregarMarca.Click += new System.EventHandler(this.btnAgregarMarca_Click);
@@ -173,7 +174,8 @@
             this.cbxCampo.Location = new System.Drawing.Point(16, 467);
             this.cbxCampo.Name = "cbxCampo";
             this.cbxCampo.Size = new System.Drawing.Size(154, 24);
-            this.cbxCampo.TabIndex = 11;
+            this.cbxCampo.TabIndex = 6;
+            this.cbxCampo.SelectedIndexChanged += new System.EventHandler(this.cbxCampo_SelectedIndexChanged);
             // 
             // cbxCriterio
             // 
@@ -181,21 +183,21 @@
             this.cbxCriterio.Location = new System.Drawing.Point(16, 532);
             this.cbxCriterio.Name = "cbxCriterio";
             this.cbxCriterio.Size = new System.Drawing.Size(154, 24);
-            this.cbxCriterio.TabIndex = 12;
+            this.cbxCriterio.TabIndex = 7;
             // 
             // txtBuscar
             // 
             this.txtBuscar.Location = new System.Drawing.Point(16, 613);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(152, 22);
-            this.txtBuscar.TabIndex = 13;
+            this.txtBuscar.TabIndex = 8;
             // 
             // btnBuscar
             // 
             this.btnBuscar.Location = new System.Drawing.Point(16, 641);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 14;
+            this.btnBuscar.TabIndex = 9;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
@@ -204,9 +206,10 @@
             this.btnLimpiarBusqueda.Location = new System.Drawing.Point(97, 641);
             this.btnLimpiarBusqueda.Name = "btnLimpiarBusqueda";
             this.btnLimpiarBusqueda.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpiarBusqueda.TabIndex = 15;
+            this.btnLimpiarBusqueda.TabIndex = 10;
             this.btnLimpiarBusqueda.Text = "Limpiar";
             this.btnLimpiarBusqueda.UseVisualStyleBackColor = true;
+            this.btnLimpiarBusqueda.Click += new System.EventHandler(this.btnLimpiarBusqueda_Click);
             // 
             // lblBuscar
             // 
@@ -215,7 +218,8 @@
             this.lblBuscar.Name = "lblBuscar";
             this.lblBuscar.Size = new System.Drawing.Size(49, 16);
             this.lblBuscar.TabIndex = 16;
-            this.lblBuscar.Text = "Criterio";
+            this.lblBuscar.Text = "Buscar";
+            this.lblBuscar.Click += new System.EventHandler(this.lblBuscar_Click);
             // 
             // contextMenuStrip1
             // 
@@ -275,7 +279,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(906, 28);
-            this.menuStrip1.TabIndex = 19;
+            this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // frmArticulo

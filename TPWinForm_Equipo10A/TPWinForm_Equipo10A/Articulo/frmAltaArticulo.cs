@@ -69,7 +69,7 @@ namespace TPWinForm_Equipo10A
                 }
                 else if (btnAgregar.Text == "Modificar") {
                     negocio.Modificar(this.articulo);
-                    MessageBox.Show("Articulo modificado correctamente.");
+                    MessageBox.Show("Modificar agregado correctamente.");
                 }
                     
 
