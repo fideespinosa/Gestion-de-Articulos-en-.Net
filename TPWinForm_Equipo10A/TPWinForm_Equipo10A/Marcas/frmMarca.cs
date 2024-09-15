@@ -67,9 +67,30 @@ namespace TPWinForm_Equipo10A
             
         }
 
+        public void cargarMarca()
+        {
+            MarcasNegocio negocio = new MarcasNegocio();
+            ListaMarcas = negocio.ListarMarcas();
+            dgvListarMarcas.DataSource = ListaMarcas;
+
+        }
+
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            MarcasNegocio negocio = new MarcasNegocio();
+            Marcas seleccionado;
+            try
+            {
+                seleccionado = (Marcas)dgvListarMarcas.CurrentRow.DataBoundItem;
+                negocio.Eliminar(seleccionado.Id);
+                cargarMarca();
+                MessageBox.Show(seleccionado.Descripcion + " eliminado correctamente");
+            }
+            catch (Exception ex)
+            {
 
+                MessageBox.Show("No se pudo borrar el articulo");
+            }
         }
 
         private void lblTitulo_Click(object sender, EventArgs e)

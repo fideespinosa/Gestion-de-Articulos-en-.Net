@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -68,7 +69,26 @@ namespace TPWinForm_Equipo10A
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            
+            CategoriaNegocio negocio = new CategoriaNegocio();
+            Categorias seleccionado;
+            try
+            {
+                seleccionado = (Categorias)dgvCategorias.CurrentRow.DataBoundItem;
+                negocio.Eliminar(seleccionado.Id);
+                cargarCategoria();
+                MessageBox.Show(seleccionado.Descripcion + " eliminado correctamente");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("No se pudo borrar el articulo");
+            }
+        }
+        public void cargarCategoria()
+        {
+            CategoriaNegocio negocio = new CategoriaNegocio();
+                categorias = negocio.ListarCategoria();
+                dgvCategorias.DataSource = categorias;
         }
     }
 }

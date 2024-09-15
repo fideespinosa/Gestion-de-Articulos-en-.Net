@@ -61,6 +61,24 @@ namespace Negocio
                 datos.CerrarConexion();
             }
     }
+
+    public void Eliminar(int id)
+        {
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.SetearConsulta("delete from MARCAS where id = @id");
+                datos.setearParametro("@id", id);
+                datos.EjecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
+
     }
 
 }
