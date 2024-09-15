@@ -162,7 +162,7 @@ namespace TPWinForm_Equipo10A
         private void cbxCampo_SelectedIndexChanged(object sender, EventArgs e)
         {
             string opcion = cbxCampo.SelectedItem.ToString();
-
+            cbxCriterio.Items.Clear();
             if (opcion == "Precio")
             {
                 cbxCriterio.Items.Add("Mayor a");
@@ -189,11 +189,34 @@ namespace TPWinForm_Equipo10A
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
+
             negocio = new ArticuloNegocio();    
             ListaArticulos = negocio.ListarArticulos();
             if (txtBuscar.TextLength>0)
-                ListaArticulos = ListaArticulos.Where(x => x.Nombre.ToLower().Contains(txtBuscar.Text.ToLower())).ToList();
+                ListaArticulos = ListaArticulos.FindAll(x => x.Nombre.ToLower().Contains(txtBuscar.Text.ToLower())).ToList();
             dgvListarArticulos.DataSource = ListaArticulos;
+
+
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+
+            try
+            {
+                string campo = cbxCampo.SelectedItem.ToString();
+                string criterio = cbxCriterio.SelectedItem.ToString();
+                string filtro = txtBuscar.Text;
+                dgvListarArticulos.DataSource = negocio.filtrar(campo, criterio, filtro);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
         }
     }
 }
