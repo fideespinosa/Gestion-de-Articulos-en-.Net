@@ -20,7 +20,7 @@ namespace TPWinForm_Equipo10A
         }
 
         private List<Articulo> ListaArticulos;
-        private void listarArticuloWindow_Load(object sender, EventArgs e)
+        private void frmArticulo_Load(object sender, EventArgs e)
         {
          cargarArticulo();
 
@@ -72,11 +72,6 @@ namespace TPWinForm_Equipo10A
             cargarArticulo();
         }
 
-        private void picbxArticulo_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void cargarImagen(string imagen)
         {
             try
@@ -91,7 +86,6 @@ namespace TPWinForm_Equipo10A
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-
             Articulo Seleccionado = (Articulo)dgvListarArticulos.CurrentRow.DataBoundItem;
             frmAltaArticulo modificar = new frmAltaArticulo(Seleccionado);
             //CrearArticulo.MdiParent = this;
@@ -117,10 +111,7 @@ namespace TPWinForm_Equipo10A
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btnAgregarMarca_Click(object sender, EventArgs e)
         {
@@ -148,9 +139,5 @@ namespace TPWinForm_Equipo10A
 
         }
 
-        private void dgvListarArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

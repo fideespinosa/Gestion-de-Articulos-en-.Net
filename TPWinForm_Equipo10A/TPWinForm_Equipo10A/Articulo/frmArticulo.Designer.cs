@@ -72,7 +72,6 @@
             this.dgvListarArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListarArticulos.Size = new System.Drawing.Size(883, 399);
             this.dgvListarArticulos.TabIndex = 0;
-            this.dgvListarArticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListarArticulos_CellContentClick);
             this.dgvListarArticulos.SelectionChanged += new System.EventHandler(this.dgvListarArticulos_SelectionChanged);
             // 
             // btnAgregar
@@ -117,7 +116,6 @@
             this.picbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picbxArticulo.TabIndex = 5;
             this.picbxArticulo.TabStop = false;
-            this.picbxArticulo.Click += new System.EventHandler(this.picbxArticulo_Click);
             // 
             // btnAgregarImagen
             // 
@@ -312,7 +310,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administracion de Articulos";
-            this.Load += new System.EventHandler(this.listarArticuloWindow_Load);
+            this.Load += new System.EventHandler(this.frmArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListarArticulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbxArticulo)).EndInit();
             this.contextMenuStrip2.ResumeLayout(false);

@@ -41,7 +41,7 @@
             this.txtbPrecio = new System.Windows.Forms.TextBox();
             this.lblDesc = new System.Windows.Forms.Label();
             this.txtbDescAr = new System.Windows.Forms.RichTextBox();
-            this.btnAgregarArticulo = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.btnCancelarArticulo = new System.Windows.Forms.Button();
             this.txtbUrlImagen = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,7 +58,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(235, 29);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "CREAR ARTICULO";
-            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // lblNombreAr
             // 
@@ -84,14 +83,13 @@
             this.lblCodAr.Size = new System.Drawing.Size(58, 17);
             this.lblCodAr.TabIndex = 3;
             this.lblCodAr.Text = "Codigo";
-            this.lblCodAr.Click += new System.EventHandler(this.lblCodAr_Click);
             // 
             // txtbCodAr
             // 
             this.txtbCodAr.Location = new System.Drawing.Point(121, 51);
             this.txtbCodAr.Name = "txtbCodAr";
             this.txtbCodAr.Size = new System.Drawing.Size(205, 23);
-            this.txtbCodAr.TabIndex = 2;
+            this.txtbCodAr.TabIndex = 0;
             // 
             // cbxMarca
             // 
@@ -101,7 +99,6 @@
             this.cbxMarca.Name = "cbxMarca";
             this.cbxMarca.Size = new System.Drawing.Size(205, 25);
             this.cbxMarca.TabIndex = 3;
-            this.cbxMarca.SelectedIndexChanged += new System.EventHandler(this.cbxMarca_SelectedIndexChanged);
             // 
             // lblMarca
             // 
@@ -160,28 +157,28 @@
             this.txtbDescAr.Location = new System.Drawing.Point(121, 109);
             this.txtbDescAr.Name = "txtbDescAr";
             this.txtbDescAr.Size = new System.Drawing.Size(205, 25);
-            this.txtbDescAr.TabIndex = 7;
+            this.txtbDescAr.TabIndex = 2;
             this.txtbDescAr.Text = "";
             // 
-            // btnAgregarArticulo
+            // btnAgregar
             // 
-            this.btnAgregarArticulo.Location = new System.Drawing.Point(20, 260);
-            this.btnAgregarArticulo.Name = "btnAgregarArticulo";
-            this.btnAgregarArticulo.Size = new System.Drawing.Size(107, 35);
-            this.btnAgregarArticulo.TabIndex = 8;
-            this.btnAgregarArticulo.Text = "Agregar";
-            this.btnAgregarArticulo.UseVisualStyleBackColor = true;
-            this.btnAgregarArticulo.Click += new System.EventHandler(this.btnAgregarArticulo_Click);
+            this.btnAgregar.Location = new System.Drawing.Point(20, 260);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(107, 35);
+            this.btnAgregar.TabIndex = 7;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnCancelarArticulo
             // 
             this.btnCancelarArticulo.Location = new System.Drawing.Point(226, 260);
             this.btnCancelarArticulo.Name = "btnCancelarArticulo";
             this.btnCancelarArticulo.Size = new System.Drawing.Size(100, 35);
-            this.btnCancelarArticulo.TabIndex = 11;
+            this.btnCancelarArticulo.TabIndex = 8;
             this.btnCancelarArticulo.Text = "Cancelar";
             this.btnCancelarArticulo.UseVisualStyleBackColor = true;
-            this.btnCancelarArticulo.Click += new System.EventHandler(this.button1_Click);
+            this.btnCancelarArticulo.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // txtbUrlImagen
             // 
@@ -199,7 +196,6 @@
             this.label1.Size = new System.Drawing.Size(86, 17);
             this.label1.TabIndex = 16;
             this.label1.Text = "Url Imagen";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pbxArticuloImagen
             // 
@@ -209,7 +205,6 @@
             this.pbxArticuloImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxArticuloImagen.TabIndex = 17;
             this.pbxArticuloImagen.TabStop = false;
-            this.pbxArticuloImagen.Click += new System.EventHandler(this.pbxArticuloImagen_Click);
             // 
             // frmAltaArticulo
             // 
@@ -221,7 +216,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtbUrlImagen);
             this.Controls.Add(this.btnCancelarArticulo);
-            this.Controls.Add(this.btnAgregarArticulo);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtbDescAr);
             this.Controls.Add(this.lblDesc);
             this.Controls.Add(this.txtbPrecio);
@@ -244,7 +239,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alta de Articulo";
-            this.Load += new System.EventHandler(this.ArticulosWindow_Load);
+            this.Load += new System.EventHandler(this.frmArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticuloImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -266,7 +261,7 @@
         private System.Windows.Forms.TextBox txtbPrecio;
         private System.Windows.Forms.Label lblDesc;
         private System.Windows.Forms.RichTextBox txtbDescAr;
-        private System.Windows.Forms.Button btnAgregarArticulo;
+        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnCancelarArticulo;
         private System.Windows.Forms.TextBox txtbUrlImagen;
         private System.Windows.Forms.Label label1;
