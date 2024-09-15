@@ -14,55 +14,79 @@ namespace TPWinForm_Equipo10A
 {
     public partial class frmAltaArticulo : Form
     {
+        private Articulo articulo = null;
+        private ArticuloNegocio negocio;
+        private ArtImg ArtImg = null;
         public frmAltaArticulo()
         {
             InitializeComponent();
+         
         }
-        private Articulo articulo = null;
-        private ArtImg ArtImg = null;
+        
 
         public frmAltaArticulo(Articulo Articulo)
         {
             InitializeComponent();
+            this.Text ="Modificar Articulo";
+            this.lblTitulo.Text = "MODIFICAR ARTICULO";
+            this.btnAgregar.Text ="Modificar";
             this.articulo = Articulo;
-        }
-        private void button1_Click(object sender, EventArgs e)
+                    }
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void btnAgregarArticulo_Click(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Articulo art = new Articulo();
-            ArticuloNegocio negocio = new ArticuloNegocio();
-            art.Imagen = new ArtImg();
-            ArtImg img = new ArtImg();   
+            negocio = new ArticuloNegocio();
 
+            
+            ArtImg img = new ArtImg();
+
+            //Agregar Arituclo
+            if (this.articulo ==null)
+            {
+                this.articulo = new Articulo();
+            }
             try
-            {
-                img.ImagenUrl = txtbUrlImagen.Text;
-                art.Nombre = txtbNombre.Text;
-                art.Codigo = txtbCodAr.Text;
-                art.Descripcion = txtbDescAr.Text;
-                art.MarcasCls = (Marcas)cbxMarca.SelectedItem;
-                art.CategoriasCls = (Categorias)cbxCat.SelectedItem;
-                art.Precio = decimal.Parse(txtbPrecio.Text);
-                art.Descripcion = txtbDescAr.Text; 
-                img.ImagenUrl = txtbUrlImagen.Text;
+                {
+                    img.ImagenUrl = txtbUrlImagen.Text;
+                    this.articulo.Nombre = txtbNombre.Text;
+                    this.articulo.Codigo = txtbCodAr.Text;
+                    this.articulo.Descripcion = txtbDescAr.Text;
+                    this.articulo.MarcasCls = (Marcas)cbxMarca.SelectedItem;
+                    this.articulo.CategoriasCls = (Categorias)cbxCat.SelectedItem;
+                    this.articulo.Precio = decimal.Parse(txtbPrecio.Text);
+                    this.articulo.Descripcion = txtbDescAr.Text;
+                    this.articulo.Imagen = new ArtImg();
+                    img.ImagenUrl = txtbUrlImagen.Text;
 
-                negocio.Agregar(art, img);
-               // negocio.AgregarImagen(img, art);
-                MessageBox.Show("Articulo agregado correctamente.");
-                Close();
+                if (btnAgregar.Text == "Agregar")
+                {
+                    negocio.Agregar(this.articulo, img);
+                    MessageBox.Show("Articulo agregado correctamente.");
+                }
+                else if (btnAgregar.Text == "Modificar") {
+                    negocio.Modificar(this.articulo);
+                    MessageBox.Show("Articulo modificado correctamente.");
+                }
+                    
+
+
+                    Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
 
-        }
 
-        private void ArticulosWindow_Load(object sender, EventArgs e)
+
+        
+
+        private void frmArticulo_Load(object sender, EventArgs e)
         {
             CategoriaNegocio categoria = new CategoriaNegocio();
             MarcasNegocio marca = new MarcasNegocio();
@@ -76,7 +100,7 @@ namespace TPWinForm_Equipo10A
                 cbxCat.ValueMember = "Id";
                 cbxCat.DisplayMember = "Descripcion";
 
-                if (articulo != null) 
+                if (articulo != null) //Si es diferentes entonces MOD aca!, Seteamos 
                 {
                     //artImg.ImagenUrl = txtbUrlImagen.Text;
                     txtbNombre.Text = articulo.Nombre;
@@ -85,7 +109,7 @@ namespace TPWinForm_Equipo10A
                     txtbPrecio.Text = articulo.Precio.ToString();
                     cbxMarca.SelectedValue = articulo.MarcasCls.Id;
                     cbxCat.SelectedValue = articulo.CategoriasCls.Id;
-
+                    cargarImagen(this.articulo.Imagen.ImagenUrl);
                     //artImg.ImagenUrl = txtbUrlImagen.Text;
                     // imagen se puede generar funcion para que con el id de articulo muestre imagen
                     // se puede sobre cargar cargar imagen para que lo haga con el id de articulo.
@@ -99,16 +123,6 @@ namespace TPWinForm_Equipo10A
             }
         }
 
-        private void cbxMarca_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtbUrlImagen_Leave(object sender, EventArgs e)
         {   
             cargarImagen(txtbUrlImagen.Text);   
@@ -120,30 +134,10 @@ namespace TPWinForm_Equipo10A
             {
                 pbxArticuloImagen.Load(imagen);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 pbxArticuloImagen.Load("https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png");
             }
-        }
-
-        private void pbxArticuloImagen_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblCodAr_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTitulo_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
