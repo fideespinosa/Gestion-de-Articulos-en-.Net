@@ -22,14 +22,20 @@ namespace TPWinForm_Equipo10A
         private List<Articulo> ListaArticulos;
         private void frmArticulo_Load(object sender, EventArgs e)
         {
-         cargarArticulo();
+            cargarArticulo();
+            cargarCbxCampo();
+
+        }
+
+        private void cargarCbxCampo()
+        {
             cbxCampo.Items.Add("Codigo");
             cbxCampo.Items.Add("Nombre");
             cbxCampo.Items.Add("Marca");
             cbxCampo.Items.Add("Categoria");
             cbxCampo.Items.Add("Precio");
-         
         }
+
         private void cargarArticulo()
         {
 
@@ -167,6 +173,15 @@ namespace TPWinForm_Equipo10A
                 cbxCriterio.Items.Add("Termina con");
                 cbxCriterio.Items.Add("Contiene");
             }
+        }
+
+        private void btnLimpiarBusqueda_Click(object sender, EventArgs e)
+        {
+            cbxCriterio.Items.Clear();
+            cargarCbxCampo();
+            cbxCampo.Text="";
+            cbxCriterio.Text="";
+            //cbxCriterio.Items.Clear();
         }
     }
 }
