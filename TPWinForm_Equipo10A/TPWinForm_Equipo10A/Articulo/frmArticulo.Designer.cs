@@ -174,6 +174,7 @@
             this.cbxCampo.Name = "cbxCampo";
             this.cbxCampo.Size = new System.Drawing.Size(154, 24);
             this.cbxCampo.TabIndex = 11;
+            this.cbxCampo.SelectedIndexChanged += new System.EventHandler(this.cbxCampo_SelectedIndexChanged);
             // 
             // cbxCriterio
             // 
@@ -213,9 +214,10 @@
             this.lblBuscar.AutoSize = true;
             this.lblBuscar.Location = new System.Drawing.Point(15, 575);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(49, 16);
+            this.lblBuscar.Size = new System.Drawing.Size(42, 16);
             this.lblBuscar.TabIndex = 16;
-            this.lblBuscar.Text = "Criterio";
+            this.lblBuscar.Text = "Clave";
+            this.lblBuscar.Click += new System.EventHandler(this.lblBuscar_Click);
             // 
             // contextMenuStrip1
             // 
@@ -250,21 +252,21 @@
             // tsmMarca
             // 
             this.tsmMarca.Name = "tsmMarca";
-            this.tsmMarca.Size = new System.Drawing.Size(224, 26);
+            this.tsmMarca.Size = new System.Drawing.Size(157, 26);
             this.tsmMarca.Text = "Marca";
             this.tsmMarca.Click += new System.EventHandler(this.tsmMarca_Click);
             // 
             // tsmCategoria
             // 
             this.tsmCategoria.Name = "tsmCategoria";
-            this.tsmCategoria.Size = new System.Drawing.Size(224, 26);
+            this.tsmCategoria.Size = new System.Drawing.Size(157, 26);
             this.tsmCategoria.Text = "Categoria";
             this.tsmCategoria.Click += new System.EventHandler(this.tsmCategoria_Click);
             // 
             // tsmSalir
             // 
             this.tsmSalir.Name = "tsmSalir";
-            this.tsmSalir.Size = new System.Drawing.Size(224, 26);
+            this.tsmSalir.Size = new System.Drawing.Size(157, 26);
             this.tsmSalir.Text = "Salir";
             // 
             // menuStrip1
@@ -274,7 +276,7 @@
             this.tspCatalogo});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(906, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(906, 30);
             this.menuStrip1.TabIndex = 19;
             this.menuStrip1.Text = "menuStrip1";
             // 
