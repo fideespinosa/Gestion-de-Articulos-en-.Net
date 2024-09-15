@@ -101,7 +101,20 @@ namespace TPWinForm_Equipo10A
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            Articulo seleccionado;
+            try
+            {
+                seleccionado = (Articulo)dgvListarArticulos.CurrentRow.DataBoundItem;
+                negocio.Eliminar(seleccionado.Id);
+                cargarArticulo();
+                MessageBox.Show(seleccionado.Nombre + " eliminado correctamente");
+            }
+            catch (Exception ex)
+            {
 
+                MessageBox.Show("No se pudo borrar el articulo");
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -111,9 +124,9 @@ namespace TPWinForm_Equipo10A
 
         private void btnAgregarMarca_Click(object sender, EventArgs e)
         {
-            frmAltaMarca frmAltaMarca = new frmAltaMarca();
+            frmAltaMarca AltaMarca = new frmAltaMarca();
 
-            frmAltaMarca.ShowDialog();
+            AltaMarca.ShowDialog();
         }
 
         private void btnAgregarCategoria_Click(object sender, EventArgs e)
@@ -124,8 +137,8 @@ namespace TPWinForm_Equipo10A
 
         private void tsmMarca_Click(object sender, EventArgs e)
         {
-            frmMarcas frmMarcas = new frmMarcas();  
-            frmMarcas.ShowDialog();
+            frmMarcas Marca = new frmMarcas();
+            Marca.ShowDialog();
         }
 
         private void tsmCategoria_Click(object sender, EventArgs e)

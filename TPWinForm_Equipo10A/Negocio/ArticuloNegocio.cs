@@ -43,6 +43,7 @@ namespace Negocio
                 {
                     Articulo aux = new Articulo();
                     aux.Codigo = (string)datos.lector["Codigo"];
+                    aux.Id = (int)datos.lector["Id"];
                     aux.Nombre = (string)datos.lector["Nombre"];
                     aux.Descripcion = (string)datos.lector["Descripcion"];
                     aux.MarcasCls = new Marcas();
@@ -152,6 +153,24 @@ namespace Negocio
             {
                 datos.CerrarConexion();
             }
+        }
+
+        public void Eliminar(int Id)
+        {
+           
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.SetearConsulta("delete from ARTICULOS where id = @Id");
+                datos.setearParametro("@Id", Id);
+                datos.EjecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+         
         }
     }
 }
