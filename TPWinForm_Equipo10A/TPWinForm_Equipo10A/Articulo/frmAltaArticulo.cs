@@ -47,13 +47,13 @@ namespace TPWinForm_Equipo10A
             ArtImg img = new ArtImg();
 
             //Agregar Arituclo
-            if (this.articulo ==null)
-            {
-                this.articulo = new Articulo();
-            }
             try
                 {
-                    img.ImagenUrl = txtbUrlImagen.Text;
+                if (this.articulo ==null)
+                {
+                    this.articulo = new Articulo();
+                }
+                img.ImagenUrl = txtbUrlImagen.Text;
                     this.articulo.Nombre = txtbNombre.Text;
                     this.articulo.Codigo = txtbCodAr.Text;
                     this.articulo.Descripcion = txtbDescAr.Text;

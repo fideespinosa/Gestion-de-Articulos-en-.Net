@@ -63,8 +63,7 @@ namespace TPWinForm_Equipo10A
             seleccionado = (Marcas)dgvListarMarcas.CurrentRow.DataBoundItem;
             frmAltaMarca modificar = new frmAltaMarca(seleccionado);
             modificar.ShowDialog();
-            
-            
+   
         }
 
         public void cargarMarca()

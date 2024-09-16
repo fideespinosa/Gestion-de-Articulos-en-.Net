@@ -38,10 +38,10 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(30, 24);
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(42, 30);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(205, 31);
+            this.lblTitulo.Size = new System.Drawing.Size(141, 22);
             this.lblTitulo.TabIndex = 7;
             this.lblTitulo.Text = "Agregar Marca";
             this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
@@ -81,6 +81,7 @@
             this.btnCancelarMarca.TabIndex = 6;
             this.btnCancelarMarca.Text = "Cancelar";
             this.btnCancelarMarca.UseVisualStyleBackColor = true;
+            this.btnCancelarMarca.Click += new System.EventHandler(this.btnCancelarMarca_Click);
             // 
             // frmAltaMarca
             // 
