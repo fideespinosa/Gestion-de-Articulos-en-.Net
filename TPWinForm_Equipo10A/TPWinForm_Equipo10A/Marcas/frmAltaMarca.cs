@@ -15,7 +15,7 @@ namespace TPWinForm_Equipo10A
     public partial class frmAltaMarca : Form
     {
         private Marcas seleccionado;
-
+        private MarcasNegocio negocio;
         public frmAltaMarca()
         {
             InitializeComponent();
@@ -23,9 +23,14 @@ namespace TPWinForm_Equipo10A
 
         public frmAltaMarca(Marcas seleccionado)
         {
-            this.seleccionado=seleccionado;
             InitializeComponent();
+            this.seleccionado=seleccionado;
             this.lblTitulo.Text  = "MODIFICAR MARCA";
+            btnAgregarMarca.Text = "Modificar";
+            if(seleccionado != null ) 
+            {
+                txtbxNombre.Text = seleccionado.Descripcion;
+            }
         }
 
         private void lblTitulo_Click(object sender, EventArgs e)
@@ -35,14 +40,33 @@ namespace TPWinForm_Equipo10A
 
         private void btnAgregarMarca_Click(object sender, EventArgs e)
         {
-            MarcasNegocio negocio = new MarcasNegocio();
-            Marcas marca = new Marcas();
+            negocio = new MarcasNegocio();
 
             try 
             {
-                marca.Descripcion = txtbxNombre.Text;
-                negocio.AgregarMarca(marca);
-                MessageBox.Show("Marca Agregada exitosamente");
+                if( seleccionado == null ) 
+                {
+                    this.seleccionado = new Marcas();
+                }
+
+                if (string.IsNullOrWhiteSpace(txtbxNombre.Text))
+                {
+                    MessageBox.Show("El nombre de la marca no puede estar vacío", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (btnAgregarMarca.Text == "Agregar")
+                {
+                    seleccionado.Descripcion = txtbxNombre.Text;
+                    negocio.AgregarMarca(seleccionado);
+                    MessageBox.Show("Marca Agregada exitosamente");
+                }
+                else if (btnAgregarMarca.Text == "Modificar")
+                {
+                    seleccionado.Descripcion = txtbxNombre.Text;
+                    negocio.Modificar(seleccionado);
+                    MessageBox.Show("Marca Modificada exitosamente");
+                }
                 Close();
             }
             catch (Exception ex) 
@@ -54,6 +78,11 @@ namespace TPWinForm_Equipo10A
         private void frmAltaMarca_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCancelarMarca_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

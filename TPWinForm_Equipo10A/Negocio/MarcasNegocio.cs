@@ -79,6 +79,29 @@ namespace Negocio
             }
         }
 
+        public void Modificar(Marcas marca)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                
+                datos.SetearConsulta("UPDATE MARCAS SET Descripcion = @descripcion WHERE id = @id");
+                datos.setearParametro("@descripcion", marca.Descripcion);
+                datos.setearParametro("@id", marca.Id);
+                datos.EjecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+                
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+        }
+
     }
 
+   
 }
