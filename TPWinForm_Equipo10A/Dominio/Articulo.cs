@@ -12,7 +12,7 @@ namespace Dominio
     {
         public  int Id{ get; set; }
 
-        [DisplayName("Articuo")]
+        [DisplayName("Articulo")]
         public string Codigo { get; set; }
         public string Nombre { get; set; }
         [DisplayName("Descripción")]

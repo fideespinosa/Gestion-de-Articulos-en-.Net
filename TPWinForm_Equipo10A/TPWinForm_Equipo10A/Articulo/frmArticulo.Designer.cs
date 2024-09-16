@@ -72,6 +72,7 @@
             this.dgvListarArticulos.Size = new System.Drawing.Size(662, 324);
             this.dgvListarArticulos.TabIndex = 17;
             this.dgvListarArticulos.TabStop = false;
+            this.dgvListarArticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListarArticulos_CellContentClick);
             this.dgvListarArticulos.SelectionChanged += new System.EventHandler(this.dgvListarArticulos_SelectionChanged);
             // 
             // btnAgregar
@@ -310,7 +311,9 @@
             this.Controls.Add(this.dgvListarArticulos);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(696, 610);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(696, 610);
             this.Name = "frmArticulo";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

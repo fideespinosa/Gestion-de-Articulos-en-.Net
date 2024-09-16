@@ -55,12 +55,11 @@ namespace TPWinForm_Equipo10A
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCategorias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCategorias.Location = new System.Drawing.Point(13, 80);
-            this.dgvCategorias.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvCategorias.MinimumSize = new System.Drawing.Size(281, 341);
+            this.dgvCategorias.Location = new System.Drawing.Point(10, 65);
+            this.dgvCategorias.MinimumSize = new System.Drawing.Size(211, 277);
             this.dgvCategorias.Name = "dgvCategorias";
             this.dgvCategorias.RowHeadersWidth = 51;
-            this.dgvCategorias.Size = new System.Drawing.Size(281, 341);
+            this.dgvCategorias.Size = new System.Drawing.Size(211, 277);
             this.dgvCategorias.TabIndex = 1;
             // 
             // menuStrip1
@@ -71,7 +70,8 @@ namespace TPWinForm_Equipo10A
             this.tsmAccion});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(300, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(225, 24);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -80,14 +80,14 @@ namespace TPWinForm_Equipo10A
             this.tsmArchivo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmSalir});
             this.tsmArchivo.Name = "tsmArchivo";
-            this.tsmArchivo.Size = new System.Drawing.Size(73, 24);
+            this.tsmArchivo.Size = new System.Drawing.Size(60, 20);
             this.tsmArchivo.Text = "Archivo";
             // 
             // tsmSalir
             // 
             this.tsmSalir.Name = "tsmSalir";
             this.tsmSalir.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
-            this.tsmSalir.Size = new System.Drawing.Size(167, 26);
+            this.tsmSalir.Size = new System.Drawing.Size(132, 22);
             this.tsmSalir.Text = "Salir";
             this.tsmSalir.Click += new System.EventHandler(this.tsmSalir_Click);
             // 
@@ -98,20 +98,20 @@ namespace TPWinForm_Equipo10A
             this.tsmModificar,
             this.tsmEliminar});
             this.tsmAccion.Name = "tsmAccion";
-            this.tsmAccion.Size = new System.Drawing.Size(68, 24);
+            this.tsmAccion.Size = new System.Drawing.Size(56, 20);
             this.tsmAccion.Text = "Accion";
             // 
             // tsmAgregar
             // 
             this.tsmAgregar.Name = "tsmAgregar";
-            this.tsmAgregar.Size = new System.Drawing.Size(156, 26);
+            this.tsmAgregar.Size = new System.Drawing.Size(125, 22);
             this.tsmAgregar.Text = "Agregar";
             this.tsmAgregar.Click += new System.EventHandler(this.tsmAgregar_Click);
             // 
             // tsmModificar
             // 
             this.tsmModificar.Name = "tsmModificar";
-            this.tsmModificar.Size = new System.Drawing.Size(156, 26);
+            this.tsmModificar.Size = new System.Drawing.Size(125, 22);
             this.tsmModificar.Text = "Modificar";
             // 
             // tsmEliminar
@@ -120,19 +120,19 @@ namespace TPWinForm_Equipo10A
             this.tsmEliminarLogica,
             this.tsmEliminarFisica});
             this.tsmEliminar.Name = "tsmEliminar";
-            this.tsmEliminar.Size = new System.Drawing.Size(156, 26);
+            this.tsmEliminar.Size = new System.Drawing.Size(125, 22);
             this.tsmEliminar.Text = "Eliminar";
             // 
             // tsmEliminarLogica
             // 
             this.tsmEliminarLogica.Name = "tsmEliminarLogica";
-            this.tsmEliminarLogica.Size = new System.Drawing.Size(136, 26);
+            this.tsmEliminarLogica.Size = new System.Drawing.Size(109, 22);
             this.tsmEliminarLogica.Text = "Logica";
             // 
             // tsmEliminarFisica
             // 
             this.tsmEliminarFisica.Name = "tsmEliminarFisica";
-            this.tsmEliminarFisica.Size = new System.Drawing.Size(136, 26);
+            this.tsmEliminarFisica.Size = new System.Drawing.Size(109, 22);
             this.tsmEliminarFisica.Text = "Fisica";
             // 
             // lblTitulo
@@ -141,19 +141,19 @@ namespace TPWinForm_Equipo10A
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(22, 38);
+            this.lblTitulo.Location = new System.Drawing.Point(16, 31);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(185, 38);
+            this.lblTitulo.Size = new System.Drawing.Size(156, 31);
             this.lblTitulo.TabIndex = 6;
             this.lblTitulo.Text = "Categorias";
             // 
             // btnEliminar
             // 
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEliminar.Location = new System.Drawing.Point(214, 428);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Location = new System.Drawing.Point(160, 348);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(80, 38);
+            this.btnEliminar.Size = new System.Drawing.Size(60, 31);
             this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -162,10 +162,9 @@ namespace TPWinForm_Equipo10A
             // btnModificar
             // 
             this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnModificar.Location = new System.Drawing.Point(116, 428);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModificar.Location = new System.Drawing.Point(87, 348);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(80, 38);
+            this.btnModificar.Size = new System.Drawing.Size(60, 31);
             this.btnModificar.TabIndex = 3;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -174,10 +173,9 @@ namespace TPWinForm_Equipo10A
             // btnAgregar
             // 
             this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAgregar.Location = new System.Drawing.Point(13, 428);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregar.Location = new System.Drawing.Point(10, 348);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(80, 38);
+            this.btnAgregar.Size = new System.Drawing.Size(60, 31);
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -185,10 +183,10 @@ namespace TPWinForm_Equipo10A
             // 
             // frmCategoria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(300, 479);
+            this.ClientSize = new System.Drawing.Size(225, 389);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
@@ -196,8 +194,8 @@ namespace TPWinForm_Equipo10A
             this.Controls.Add(this.dgvCategorias);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximumSize = new System.Drawing.Size(469, 709);
+            this.MaximumSize = new System.Drawing.Size(241, 428);
+            this.MinimumSize = new System.Drawing.Size(241, 428);
             this.Name = "frmCategoria";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

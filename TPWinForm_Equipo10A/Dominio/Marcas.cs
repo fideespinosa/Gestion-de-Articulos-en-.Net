@@ -11,7 +11,7 @@ namespace Dominio
     {
         
         public int Id { get; set; }
-        [DisplayName("Marcas")]
+       [DisplayName("Marcas")]
         public String Descripcion { get; set; }
 
         public override string ToString()

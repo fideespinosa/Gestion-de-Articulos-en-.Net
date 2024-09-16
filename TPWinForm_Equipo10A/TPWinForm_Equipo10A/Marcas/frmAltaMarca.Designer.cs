@@ -38,40 +38,36 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(101, 33);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(30, 24);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(97, 17);
-            this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Crear Marca";
+            this.lblTitulo.Size = new System.Drawing.Size(205, 31);
+            this.lblTitulo.TabIndex = 7;
+            this.lblTitulo.Text = "Agregar Marca";
             this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 69);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(10, 100);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 17);
+            this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nombre:";
             // 
             // txtbxNombre
             // 
-            this.txtbxNombre.Location = new System.Drawing.Point(105, 69);
-            this.txtbxNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtbxNombre.Location = new System.Drawing.Point(70, 93);
             this.txtbxNombre.Name = "txtbxNombre";
-            this.txtbxNombre.Size = new System.Drawing.Size(156, 22);
+            this.txtbxNombre.Size = new System.Drawing.Size(177, 20);
             this.txtbxNombre.TabIndex = 4;
             // 
             // btnAgregarMarca
             // 
-            this.btnAgregarMarca.Location = new System.Drawing.Point(20, 128);
-            this.btnAgregarMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregarMarca.Location = new System.Drawing.Point(15, 129);
             this.btnAgregarMarca.Name = "btnAgregarMarca";
-            this.btnAgregarMarca.Size = new System.Drawing.Size(100, 28);
+            this.btnAgregarMarca.Size = new System.Drawing.Size(75, 23);
             this.btnAgregarMarca.TabIndex = 5;
             this.btnAgregarMarca.Text = "Agregar";
             this.btnAgregarMarca.UseVisualStyleBackColor = true;
@@ -79,31 +75,30 @@
             // 
             // btnCancelarMarca
             // 
-            this.btnCancelarMarca.Location = new System.Drawing.Point(163, 128);
-            this.btnCancelarMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelarMarca.Location = new System.Drawing.Point(172, 129);
             this.btnCancelarMarca.Name = "btnCancelarMarca";
-            this.btnCancelarMarca.Size = new System.Drawing.Size(100, 28);
+            this.btnCancelarMarca.Size = new System.Drawing.Size(75, 23);
             this.btnCancelarMarca.TabIndex = 6;
             this.btnCancelarMarca.Text = "Cancelar";
             this.btnCancelarMarca.UseVisualStyleBackColor = true;
             // 
             // frmAltaMarca
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(309, 250);
+            this.ClientSize = new System.Drawing.Size(275, 181);
             this.Controls.Add(this.btnCancelarMarca);
             this.Controls.Add(this.btnAgregarMarca);
             this.Controls.Add(this.txtbxNombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTitulo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MaximumSize = new System.Drawing.Size(327, 297);
-            this.MinimumSize = new System.Drawing.Size(327, 297);
+            this.MaximumSize = new System.Drawing.Size(291, 220);
+            this.MinimumSize = new System.Drawing.Size(291, 220);
             this.Name = "frmAltaMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alta de Marcas";
+            this.Load += new System.EventHandler(this.frmAltaMarca_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -41,5 +41,15 @@ namespace TPWinForm_Equipo10A
             }
             finally { }
         }
+
+        private void txtbxCodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmAltaCategoria_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

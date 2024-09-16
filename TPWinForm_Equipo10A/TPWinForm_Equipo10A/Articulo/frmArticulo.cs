@@ -218,5 +218,10 @@ namespace TPWinForm_Equipo10A
             }
 
         }
+
+        private void dgvListarArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

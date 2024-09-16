@@ -50,5 +50,10 @@ namespace TPWinForm_Equipo10A
                 MessageBox.Show(ex.ToString()) ;
             }
         }
+
+        private void frmAltaMarca_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
