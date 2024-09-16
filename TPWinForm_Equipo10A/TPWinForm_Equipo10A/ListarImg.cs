@@ -65,13 +65,19 @@ namespace TPWinForm_Equipo10A
             {
                 throw;
             }
+
         }
 
         private void btnAgregarImg_Click(object sender, EventArgs e)
         {
             ImagenNegocio negocio = new ImagenNegocio();
+            AltaImagen altaImagen = new AltaImagen(articulo);
+            altaImagen.ShowDialog();     
+        }
 
-            negocio.Agregar(string url, Articulo articulo);
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -41,20 +41,23 @@ namespace Negocio
                 datos.CerrarConexion();
             }
         }
-        public void Agregar(ArtImg img, Articulo art)
+        public void Agregar(string url, Articulo art)
         {
-            AccesoDatos datos = new AccesoDatos();
-
+            AccesoDatos datos = new AccesoDatos();;
             try
             {
-                datos.SetearConsulta("insert into IMAGENES (ImagenUrl) VALUES (@url) where IdArticulo = @id");
-                datos.setearParametro("@id", art.Id);
+                datos.SetearConsulta("insert into IMAGENES (ImagenUrl, IdArticulo) VALUES (@url, @Id)");
+                datos.setearParametro("@url", url);
+                datos.setearParametro("@Id", art.Id);
                 datos.EjecutarAccion();
                     }
             catch (Exception ex)
             {
-
                 throw;
+            }
+            finally
+            {
+                datos.CerrarConexion();
             }
         }
     }
