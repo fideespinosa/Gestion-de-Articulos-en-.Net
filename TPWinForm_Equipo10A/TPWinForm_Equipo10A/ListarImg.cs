@@ -31,28 +31,24 @@ namespace TPWinForm_Equipo10A
 
         private void ListarImg_Load(object sender, EventArgs e)
         {
-            ImagenNegocio negocio = new ImagenNegocio();
-            try
-            {
-                ListaImagenes = negocio.ListarImagenes(articulo);
-                dgvImagenes.DataSource = ListaImagenes;
-                seleccionado = (ArtImg)dgvImagenes.CurrentRow.DataBoundItem;
-                cargarImagen(seleccionado.ImagenUrl);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+            cargarImagenes();
         }
-        private void cargarImagen(string imagen)
+        private void cargarImagen(ArtImg img)
         {
-            try
-            {
-                picbxImagenes.Load(imagen);
-            }
-            catch (Exception)
+            if (img.ImagenUrl == null)
             {
                 picbxImagenes.Load("https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png");
+            }
+            else
+            {
+                try
+                {
+                    picbxImagenes.Load(img.ImagenUrl);
+                }
+                catch (Exception)
+                {
+                    picbxImagenes.Load("https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png");
+                }
             }
         }
 
@@ -61,7 +57,7 @@ namespace TPWinForm_Equipo10A
             try
             {
                 seleccionado = (ArtImg)dgvImagenes.CurrentRow.DataBoundItem;
-                cargarImagen(seleccionado.ImagenUrl);
+                cargarImagen(seleccionado);
             }
             catch (Exception ex)
             {
@@ -74,7 +70,8 @@ namespace TPWinForm_Equipo10A
         {
             ImagenNegocio negocio = new ImagenNegocio();
             AltaImagen altaImagen = new AltaImagen(articulo);
-            altaImagen.ShowDialog();     
+            altaImagen.ShowDialog();
+            cargarImagenes();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -82,6 +79,7 @@ namespace TPWinForm_Equipo10A
             ArtImg artImg = (ArtImg)dgvImagenes.CurrentRow.DataBoundItem;
             AltaImagen altaImagen = new AltaImagen(artImg);
             altaImagen.ShowDialog();
+            cargarImagenes();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -96,6 +94,35 @@ namespace TPWinForm_Equipo10A
             {
                 MessageBox.Show(ex.ToString());
             }
+            finally 
+            {
+                cargarImagenes();
+            }
          }
+
+        public void cargarImagenes()
+        {
+            ImagenNegocio negocio = new ImagenNegocio();
+            try
+            {
+                ListaImagenes = negocio.ListarImagenes(articulo);
+                dgvImagenes.DataSource = ListaImagenes;
+                if (ListaImagenes.Count > 0)
+                {
+                    seleccionado = (ArtImg)dgvImagenes.CurrentRow.DataBoundItem;
+                    cargarImagen(seleccionado);
+                }
+                else
+                {
+                    negocio.Agregar("https://cdn.discordapp.com/attachments/734093444271833240/1285101890043904060/large.png?ex=66e90be6&is=66e7ba66&hm=b75a4615744f20ca15d0e0527bc9564897c752eb20aa1230344d1fdaa89dfd31&", articulo);
+                    MessageBox.Show("Articulo sin Imagen, se agregara imagen generica.");
+                    Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }

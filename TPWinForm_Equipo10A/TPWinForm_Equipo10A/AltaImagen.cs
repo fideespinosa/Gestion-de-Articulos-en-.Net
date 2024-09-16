@@ -25,7 +25,7 @@ namespace TPWinForm_Equipo10A
         {
             this.artImg = artImg;
             InitializeComponent();
-            this.btnAgregarImagen.Text = "MODIFICAR";
+            this.btnAgregarImagen.Text = "Modificar";
             if (artImg != null)
             {
                 txtUrlImagen.Text = artImg.ImagenUrl;
@@ -49,7 +49,7 @@ namespace TPWinForm_Equipo10A
            
             try
             {
-                if (btnAgregarImagen.Text == "AGREGAR")
+                if (btnAgregarImagen.Text == "Agregar")
                 {
                     if (string.IsNullOrWhiteSpace(txtUrlImagen.Text))
                     {
@@ -61,21 +61,22 @@ namespace TPWinForm_Equipo10A
                         ImagenNegocio negocio = new ImagenNegocio();
                         negocio.Agregar(txtUrlImagen.Text, art);
                         MessageBox.Show("Imagen Cargada Exitosamente");
+                        Close();
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.ToString());
                     }
                 }
-                else if (btnAgregarImagen.Text == "MODIFICAR")
+                else if (btnAgregarImagen.Text == "Modificar")
                 {
                     ImagenNegocio negocio = new ImagenNegocio();
                     artImg.ImagenUrl = txtUrlImagen.Text;
                     negocio.Modificar(artImg);
                     MessageBox.Show("Url Imagen modificada exitosamente");
                     Close();
-                }
 
+                }
 
             }
             catch (Exception ex)

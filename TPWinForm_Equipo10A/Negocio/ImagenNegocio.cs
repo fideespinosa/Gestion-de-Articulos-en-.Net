@@ -24,7 +24,8 @@ namespace Negocio
                 while (datos.lector.Read())
                 {
                     ArtImg aux = new ArtImg();
-                    aux.ImagenUrl = (string)datos.lector["ImagenUrl"];
+                    if (!(datos.lector["ImagenUrl"] is DBNull))
+                        aux.ImagenUrl = (string)datos.lector["ImagenUrl"];
                     aux.Desc = (string)datos.lector["Nombre"];
                     aux.Id = (int)datos.lector["Id"];
 
