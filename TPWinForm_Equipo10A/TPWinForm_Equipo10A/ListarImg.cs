@@ -14,9 +14,10 @@ namespace TPWinForm_Equipo10A
 {
     public partial class ListarImg : Form
     {
-        public Articulo articulo{ get; set; }
-        public ArtImg seleccionado { get; set; }
+        private Articulo articulo{ get; set; }
+        private ArtImg seleccionado { get; set; }
         private List<ArtImg> ListaImagenes;
+
         public ListarImg()
         {
             InitializeComponent();
@@ -27,6 +28,7 @@ namespace TPWinForm_Equipo10A
             articulo = art;
             InitializeComponent();
         }
+
         private void ListarImg_Load(object sender, EventArgs e)
         {
             ImagenNegocio negocio = new ImagenNegocio();
@@ -77,7 +79,23 @@ namespace TPWinForm_Equipo10A
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-
+            ArtImg artImg = (ArtImg)dgvImagenes.CurrentRow.DataBoundItem;
+            AltaImagen altaImagen = new AltaImagen(artImg);
+            altaImagen.ShowDialog();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ImagenNegocio negocio = new ImagenNegocio();
+                negocio.EliminarImagen(seleccionado);
+                MessageBox.Show("Imagen Eliminada con exito");
+            }   
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.ToString());
+            }
+         }
     }
 }

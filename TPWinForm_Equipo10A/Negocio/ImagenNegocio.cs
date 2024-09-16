@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Dominio;
 
@@ -50,10 +51,48 @@ namespace Negocio
                 datos.setearParametro("@url", url);
                 datos.setearParametro("@Id", art.Id);
                 datos.EjecutarAccion();
-                    }
+            }
             catch (Exception ex)
             {
                 throw;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+        }
+
+        public void EliminarImagen(ArtImg img)
+        {
+            try
+            {
+
+                AccesoDatos datos = new AccesoDatos();
+                datos.SetearConsulta("delete from IMAGENES where id = " + img.Id);
+                datos.EjecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
+
+        public void Modificar(ArtImg img)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+
+                datos.SetearConsulta("UPDATE IMAGENES SET ImagenUrl = @ImagenUrl WHERE id = " + img.Id);
+                datos.setearParametro("@ImagenUrl", img.ImagenUrl);
+                datos.EjecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+
             }
             finally
             {
