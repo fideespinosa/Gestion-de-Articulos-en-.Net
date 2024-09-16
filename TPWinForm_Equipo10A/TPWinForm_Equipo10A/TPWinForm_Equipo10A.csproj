@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AltaImagen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltaImagen.Designer.cs">
+      <DependentUpon>AltaImagen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Categorias\frmCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,12 @@
     </Compile>
     <Compile Include="Categorias\frmAltaCategorias.Designer.cs">
       <DependentUpon>frmAltaCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListarImg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarImg.Designer.cs">
+      <DependentUpon>ListarImg.cs</DependentUpon>
     </Compile>
     <Compile Include="Marcas\frmAltaMarca.cs">
       <SubType>Form</SubType>
@@ -90,6 +102,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AltaImagen.resx">
+      <DependentUpon>AltaImagen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Articulo\frmAltaArticulo.resx">
       <DependentUpon>frmAltaArticulo.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Categorias\frmAltaCategorias.resx">
       <DependentUpon>frmAltaCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarImg.resx">
+      <DependentUpon>ListarImg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Marcas\frmAltaMarca.resx">
       <DependentUpon>frmAltaMarca.cs</DependentUpon>

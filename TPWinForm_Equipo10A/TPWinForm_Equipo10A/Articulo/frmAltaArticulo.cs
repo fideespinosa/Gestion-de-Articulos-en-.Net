@@ -30,8 +30,10 @@ namespace TPWinForm_Equipo10A
             this.Text ="Modificar Articulo";
             this.lblTitulo.Text = "MODIFICAR ARTICULO";
             this.btnAgregar.Text ="Modificar";
+            this.btnImagenModificar.Visible = true;
             this.articulo = Articulo;
-                    }
+
+        }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
@@ -69,7 +71,6 @@ namespace TPWinForm_Equipo10A
                 }
                 else if (btnAgregar.Text == "Modificar") {
                     negocio.Modificar(this.articulo);
-                    MessageBox.Show("Modificar agregado correctamente.");
                 }
                     
 
@@ -90,7 +91,7 @@ namespace TPWinForm_Equipo10A
         {
             CategoriaNegocio categoria = new CategoriaNegocio();
             MarcasNegocio marca = new MarcasNegocio();
-
+            //btnImagenModificar.Visible = false;
             try
             {
                 cbxMarca.DataSource = marca.ListarMarcas();
@@ -138,6 +139,12 @@ namespace TPWinForm_Equipo10A
             {
                 pbxArticuloImagen.Load("https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png");
             }
+        }
+
+        private void btnImagenModificar_Click(object sender, EventArgs e)
+        {
+            ListarImg listarImg = new ListarImg(articulo);
+            listarImg.ShowDialog();
         }
     }
 }

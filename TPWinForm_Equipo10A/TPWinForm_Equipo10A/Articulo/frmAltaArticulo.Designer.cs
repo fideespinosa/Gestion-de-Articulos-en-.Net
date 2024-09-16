@@ -46,6 +46,7 @@
             this.txtbUrlImagen = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pbxArticuloImagen = new System.Windows.Forms.PictureBox();
+            this.btnImagenModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticuloImagen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -206,12 +207,23 @@
             this.pbxArticuloImagen.TabIndex = 17;
             this.pbxArticuloImagen.TabStop = false;
             // 
+            // btnImagenModificar
+            // 
+            this.btnImagenModificar.Location = new System.Drawing.Point(133, 260);
+            this.btnImagenModificar.Name = "btnImagenModificar";
+            this.btnImagenModificar.Size = new System.Drawing.Size(87, 35);
+            this.btnImagenModificar.TabIndex = 18;
+            this.btnImagenModificar.Text = "Modificar imagen";
+            this.btnImagenModificar.UseVisualStyleBackColor = true;
+            this.btnImagenModificar.Click += new System.EventHandler(this.btnImagenModificar_Click);
+            // 
             // frmAltaArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(571, 344);
+            this.Controls.Add(this.btnImagenModificar);
             this.Controls.Add(this.pbxArticuloImagen);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtbUrlImagen);
@@ -268,5 +280,6 @@
         private System.Windows.Forms.TextBox txtbUrlImagen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pbxArticuloImagen;
+        private System.Windows.Forms.Button btnImagenModificar;
     }
 }
