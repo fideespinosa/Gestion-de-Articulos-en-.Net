@@ -25,8 +25,8 @@ namespace Negocio
                                         A.Codigo, 
                                         A.Nombre, 
                                         A.Descripcion, 
-                                        M.Descripcion AS MarcaDescripcion, 
-                                        C.Descripcion AS CategoriaDescripcion, 
+                                        M.Descripcion AS Marca, 
+                                        C.Descripcion AS Categoria, 
                                         A.Precio,
                                         M.Id as IdMarca,
                                         C.Id as IdCategoria,
@@ -42,24 +42,34 @@ namespace Negocio
                 while (datos.lector.Read())
                 {
                     Articulo aux = new Articulo();
-                    aux.Codigo = (string)datos.lector["Codigo"];
+
                     aux.Id = (int)datos.lector["Id"];
-                    aux.Nombre = (string)datos.lector["Nombre"];
-                    aux.Descripcion = (string)datos.lector["Descripcion"];
+                    if (!(datos.lector["Codigo"] is DBNull)) { aux.Codigo = (string)datos.lector["Codigo"]; }
+                    //aux.Codigo = (string)datos.lector["Codigo"];                    
+                    
+                    if (!(datos.lector["Nombre"] is DBNull)) { aux.Nombre = (string)datos.lector["Nombre"]; }
+                   // aux.Nombre = (string)datos.lector["Nombre"];
+
+                    if (!(datos.lector["Descripcion"] is DBNull)) { aux.Descripcion = (string)datos.lector["Descripcion"]; }
+                    //aux.Descripcion = (string)datos.lector["Descripcion"];
+
+                    if (!(datos.lector["Precio"] is DBNull)) { aux.Precio = (decimal)datos.lector["Precio"]; }
+                    aux.Precio = (decimal)datos.lector["Precio"];
+
                     aux.MarcasCls = new Marcas();
-                    if (!(datos.lector["MarcaDescripcion"] is DBNull))
-                        aux.MarcasCls.Descripcion = (string)datos.lector["MarcaDescripcion"];
-                    if (!(datos.lector["IdMarca"] is DBNull))
-                        aux.MarcasCls.Id = (int)datos.lector["IdMarca"];
+                    //if (!(datos.lector["MarcaDescripcion"] is DBNull))
+                        aux.MarcasCls.Descripcion = (string)datos.lector["Marca"];
+                    //else aux.MarcasCls.Descripcion = "";
+                    
 
                     aux.CategoriasCls = new Categorias();
                     //validacion de null categoria
                     if (!(datos.lector["IdCategoria"] is DBNull))
                         aux.CategoriasCls.Id = (int)datos.lector["IdCategoria"];
-                    if (!(datos.lector["CategoriaDescripcion"] is DBNull))
-                        aux.CategoriasCls.Descripcion = (string)datos.lector["CategoriaDescripcion"];
+                    if (!(datos.lector["Categoria"] is DBNull))
+                        aux.CategoriasCls.Descripcion = (string)datos.lector["Categoria"];
 
-                    aux.Precio = (decimal)datos.lector["Precio"];
+                    
 
                     aux.Imagen = new ArtImg();
                     if (!(datos.lector["Imagen"] is DBNull))

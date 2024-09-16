@@ -56,7 +56,10 @@ namespace TPWinForm_Equipo10A
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-
+            Categorias categoria = (Categorias)dgvCategorias.CurrentRow.DataBoundItem;
+            frmAltaCategoria frm  = new frmAltaCategoria(categoria);
+            frm.ShowDialog();
+            cargarListadoCategorias();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
