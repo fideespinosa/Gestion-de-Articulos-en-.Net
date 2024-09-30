@@ -108,6 +108,7 @@
             this.Controls.Add(this.picbxImagenes);
             this.Controls.Add(this.label1);
             this.Name = "ListarImg";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Imagenes";
             this.Load += new System.EventHandler(this.ListarImg_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picbxImagenes)).EndInit();

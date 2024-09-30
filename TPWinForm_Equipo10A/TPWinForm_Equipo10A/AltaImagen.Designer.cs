@@ -113,6 +113,7 @@
             this.MaximumSize = new System.Drawing.Size(503, 467);
             this.MinimumSize = new System.Drawing.Size(503, 467);
             this.Name = "AltaImagen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AltaImagen";
             this.Load += new System.EventHandler(this.AltaImagen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagenUrl)).EndInit();

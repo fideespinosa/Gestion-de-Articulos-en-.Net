@@ -34,7 +34,6 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.picbxArticulo = new System.Windows.Forms.PictureBox();
-            this.btnAgregarImagen = new System.Windows.Forms.Button();
             this.btnAgregarCategoria = new System.Windows.Forms.Button();
             this.btnAgregarMarca = new System.Windows.Forms.Button();
             this.lblCampo = new System.Windows.Forms.Label();
@@ -114,15 +113,6 @@
             this.picbxArticulo.TabIndex = 5;
             this.picbxArticulo.TabStop = false;
             // 
-            // btnAgregarImagen
-            // 
-            this.btnAgregarImagen.Location = new System.Drawing.Point(508, 505);
-            this.btnAgregarImagen.Name = "btnAgregarImagen";
-            this.btnAgregarImagen.Size = new System.Drawing.Size(156, 34);
-            this.btnAgregarImagen.TabIndex = 5;
-            this.btnAgregarImagen.Text = "Agregar Imagen";
-            this.btnAgregarImagen.UseVisualStyleBackColor = true;
-            // 
             // btnAgregarCategoria
             // 
             this.btnAgregarCategoria.Location = new System.Drawing.Point(508, 432);
@@ -167,7 +157,7 @@
             // 
             this.cbxCampo.FormattingEnabled = true;
             this.cbxCampo.Location = new System.Drawing.Point(12, 379);
-            this.cbxCampo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxCampo.Margin = new System.Windows.Forms.Padding(2);
             this.cbxCampo.Name = "cbxCampo";
             this.cbxCampo.Size = new System.Drawing.Size(116, 21);
             this.cbxCampo.TabIndex = 6;
@@ -177,7 +167,7 @@
             // 
             this.cbxCriterio.FormattingEnabled = true;
             this.cbxCriterio.Location = new System.Drawing.Point(12, 432);
-            this.cbxCriterio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxCriterio.Margin = new System.Windows.Forms.Padding(2);
             this.cbxCriterio.Name = "cbxCriterio";
             this.cbxCriterio.Size = new System.Drawing.Size(116, 21);
             this.cbxCriterio.TabIndex = 7;
@@ -185,7 +175,7 @@
             // txtBuscar
             // 
             this.txtBuscar.Location = new System.Drawing.Point(12, 498);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(115, 20);
             this.txtBuscar.TabIndex = 8;
@@ -194,7 +184,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Location = new System.Drawing.Point(12, 521);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(56, 19);
             this.btnBuscar.TabIndex = 9;
@@ -205,7 +195,7 @@
             // btnLimpiarBusqueda
             // 
             this.btnLimpiarBusqueda.Location = new System.Drawing.Point(73, 521);
-            this.btnLimpiarBusqueda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLimpiarBusqueda.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiarBusqueda.Name = "btnLimpiarBusqueda";
             this.btnLimpiarBusqueda.Size = new System.Drawing.Size(56, 19);
             this.btnLimpiarBusqueda.TabIndex = 10;
@@ -301,7 +291,6 @@
             this.Controls.Add(this.cbxCampo);
             this.Controls.Add(this.lblCriterio);
             this.Controls.Add(this.lblCampo);
-            this.Controls.Add(this.btnAgregarImagen);
             this.Controls.Add(this.btnAgregarCategoria);
             this.Controls.Add(this.btnAgregarMarca);
             this.Controls.Add(this.picbxArticulo);
@@ -337,7 +326,6 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.PictureBox picbxArticulo;
-        private System.Windows.Forms.Button btnAgregarImagen;
         private System.Windows.Forms.Button btnAgregarCategoria;
         private System.Windows.Forms.Button btnAgregarMarca;
         private System.Windows.Forms.Label lblCampo;
